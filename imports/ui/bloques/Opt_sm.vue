@@ -88,9 +88,17 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr style="color:#green;">
+                                <td>Linea 1</td>
+                                <td>{{dd_voltage_dd_linea_1}}</td>
+                            </tr>
                             <tr>
-                                <td>{{dd_linea}}</td>
-                                <td>{{dd_voltage}}</td>
+                                <td>Linea 2</td>
+                                <td>{{dd_voltage_dd_linea_2}}</td>
+                            </tr>
+                            <tr>
+                                <td>Linea 3</td>
+                                <td>{{dd_voltage_dd_linea_3}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -137,15 +145,16 @@ export default {
     },
     data() {
         return{
-            dd_linea: '',
-            dd_voltage: 0,
+            dd_voltage_1: 0,
+            dd_voltage_2: 0,
+            dd_voltage_3: 0,
         }
     },
     methods: {  
         estado_sm(){
             let bloque_1 = new Array();
             bloque_1 = ['1/2/3', '1/0/8','1/3/0', '1/0/0', '2/0/6', '0/1/0', '0/0/1', '1/3/11', '2/0/4', '2/0/3', '0/0/7', '0/0/9', '1/3/8', '2/1/0', '2/1/1', '2/1/2', '2/1/3', '1/1/8', '1/1/9', '1/1/10'];
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/status',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/status',
                 { data: { "ip": "192.168.8.254", "group": bloque_1} },
                 (error, result) => {
                     if (!error) {
@@ -170,7 +179,7 @@ export default {
         let valor = button.dataset.estado;
         console.log("Estado: "+valor);
         
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -196,7 +205,7 @@ export default {
             let bloque_2 = new Array();
             bloque_2 = ['1/0/8','1/3/2', '1/3/3', '1/2/0', '1/2/5','1/2/6'];
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": bloque_2, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -218,7 +227,7 @@ export default {
             let bloque_3 = new Array();
             bloque_3 = ['1/3/0','1/3/1', '1/3/5', '1/3/6', '1/2/4'];
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": bloque_3, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -241,7 +250,7 @@ export default {
             exterior = ['1/0/0','1/0/1', '1/0/2', '1/0/3', '1/0/4', '1/0/5', '1/0/6', '1/0/7','1/0/9', '1/0/10', '1/0/11', '1/2/2'];
              //exterior = ['2/0/6']; avenidas
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": exterior, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -263,7 +272,7 @@ export default {
             let exterior = new Array();
             exterior = ['2/0/6']; 
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": exterior, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -285,7 +294,7 @@ export default {
             let exterior = new Array();
             exterior = ['0/1/0']; 
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": exterior, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -308,7 +317,7 @@ export default {
             let grupos = new Array();
             grupos = ['0/0/1','0/0/3', '0/2/4', '0/2/5', '2/0/9', '2/0/8'];
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -330,7 +339,7 @@ export default {
             let grupos = new Array();
             grupos = ['0/0/1','0/0/3', '0/2/4', '0/2/5'];
             console.log('Hall Recibidor Izquierdo');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -355,7 +364,7 @@ export default {
             let grupos = new Array();
             grupos = ['1/3/11','1/3/10'];
             console.log('Hall Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -377,7 +386,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/0/4'];
             console.log('Parqueo Este');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -400,7 +409,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/0/3'];
             console.log('Parqueo Oeste');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -422,7 +431,7 @@ export default {
             let grupos = new Array();
             grupos = ['0/0/7', '0/0/8','0/0/10','2/0/0','2/0/1', '2/0/2'];
             console.log('Ingreso Parqueo');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -444,7 +453,7 @@ export default {
             let grupos = new Array();
             grupos = ['0/0/9'];
             console.log('Sala de control recibidor');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -466,7 +475,7 @@ export default {
             let grupos = new Array();
             grupos = ['1/3/8'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -488,7 +497,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/1/0'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -510,7 +519,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/1/1'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -532,7 +541,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/1/2'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -554,7 +563,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/1/3'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -576,7 +585,7 @@ export default {
             let grupos = new Array();
             grupos = ['1/1/8'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -598,7 +607,7 @@ export default {
             let grupos = new Array();
             grupos = ['1/1/9'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -620,7 +629,7 @@ export default {
             let grupos = new Array();
             grupos = ['1/1/10'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -642,7 +651,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/0/7'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -665,7 +674,7 @@ export default {
             grupos = ['8/0/0', '8/0/3'];
             console.log('Sistema de riego Master');
             try {
-                HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+                HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) }, timeout:3000 },
                     (error, result) => {
                         if (!error) {
@@ -691,7 +700,7 @@ export default {
             let grupos = new Array();
             grupos = ['8/0/1', '8/0/0'];
             console.log('Sistema de riego 2');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -713,7 +722,7 @@ export default {
             let grupos = new Array();
             grupos = ['8/0/2', '8/0/0'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -735,7 +744,7 @@ export default {
             let grupos = new Array();
             grupos = ['8/0/0', '8/1/0', '8/1/5'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -757,7 +766,7 @@ export default {
             let grupos = new Array();
             grupos = ['8/1/3'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -779,7 +788,7 @@ export default {
             let grupos = new Array();
             grupos = ['8/1/4'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -801,7 +810,7 @@ export default {
             let grupos = new Array();
             grupos = ['8/1/1', '8/1/2', '8/1/4'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -821,18 +830,19 @@ export default {
             let valor = button.dataset.estado,
             d_voltage = 0;
             console.log("Estado: "+valor);
-            HTTP.call('POST', 'http://192.168.4.155:3001/api/modbus/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/modbus/devices',
                 { data: { "ip": "192.168.8.21", "parameter": "voltage", "type": "instant" } },
                 (error, result) => {
                     if (!error) {
-                        console.log("Los datos recibidos son: " + result.data);
-                        this.dd_voltage = result.data.message;
+                        console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                        this.dd_voltage_1 = result.data.message.line1.value;
+                        this.dd_voltage_2 = result.data.message.line2.value;
+                        this.dd_voltage_3 = result.data.message.line3.value;
+
                         let test = JSON.stringify(result.data.message);
-                        test.forEach(element => {
-                            console.log(element);
-                        });
                     } else{
-                        console.log(" Error:  "+error);
+                        // console.log(" Error:  "+error);
+                        alert("Se perdio la conexion con el server!");
                     }
                 });  
         },

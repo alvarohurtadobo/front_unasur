@@ -86,7 +86,7 @@ export default {
             const button = this.$refs.super_vip
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -116,7 +116,7 @@ export default {
                 this.encendido_s_reuniones = true;
                 
             }
-                let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -146,7 +146,7 @@ export default {
                 this.encendido_c_reuniones = true;
                 
             }
-                let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -176,7 +176,7 @@ export default {
                 this.encendido_ing_vip = true;
                 
             }
-                let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -200,7 +200,7 @@ export default {
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
             
-                let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -222,7 +222,7 @@ export default {
             const button = this.$refs.dimm_1_down
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/dimmer/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/dimmer/',
                     { data: { "ip": '192.168.4.214',
                                 "incrdecr":0,
                                 "dimmname": 'dimmer_vip_1',
@@ -250,7 +250,7 @@ export default {
             const button = this.$refs.dimm_1_up
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/dimmer/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/dimmer/',
                     { data: { "ip": "192.168.4.214",
                                 "incrdecr":1,
                                 "dimmname": "dimmer_vip_1",
@@ -276,7 +276,7 @@ export default {
             const button = this.$refs.dimm_2_down
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/dimmer/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/dimmer/',
                     { data: { "ip": '192.168.4.214',
                                 "incrdecr":0,
                                 "dimmname": 'dimmer_vip_2',
@@ -304,7 +304,7 @@ export default {
             const button = this.$refs.dimm_2_up
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/dimmer/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/dimmer/',
                     { data: { "ip": "192.168.4.214",
                                 "incrdecr":1,
                                 "dimmname": "dimmer_vip_2",
@@ -330,7 +330,7 @@ export default {
             const button = this.$refs.live_rgb
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/rgb/live/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/live/',
                     { data: { "ip": "192.168.4.214",
                                 "order":parseInt(valor)} 
                             },
@@ -354,7 +354,7 @@ export default {
             const button = this.$refs.rgb_azul
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Azul"} 
                             },
@@ -378,7 +378,7 @@ export default {
             const button = this.$refs.rgb_verde
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Verde"} 
                             },
@@ -402,7 +402,7 @@ export default {
             const button = this.$refs.rgb_rojo
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Rojo"} 
                             },
@@ -426,7 +426,7 @@ export default {
             const button = this.$refs.rgb_plateado
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Plateado"} 
                             },
@@ -450,7 +450,7 @@ export default {
             const button = this.$refs.rgb_efecto_1
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Efecto 1"} 
                             },
@@ -474,7 +474,7 @@ export default {
             const button = this.$refs.rgb_efecto_2
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Efecto 2"} 
                             },
@@ -498,7 +498,7 @@ export default {
             const button = this.$refs.rgb_efecto_3
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Efecto 3"} 
                             },
@@ -522,7 +522,7 @@ export default {
             const button = this.$refs.rgb_efecto_4
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.4.155:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Efecto 4"} 
                             },
