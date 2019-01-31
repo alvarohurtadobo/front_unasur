@@ -26,7 +26,6 @@ export default {
 #blq_sala_multiple:hover{
     cursor: pointer;
 }
-
 .titulo{
     background-color: rgba(54, 70, 136, 0.6);
 }

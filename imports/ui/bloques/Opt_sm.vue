@@ -795,9 +795,11 @@ export default {
                         if (valor == 0) {
                             this.encendido_riego_norte_a_5 = true;
                             button.dataset.estado = 1;
+                            console.log("Cambio de estado 1");
                         } else{
                             this.encendido_riego_norte_a_5 = false;
                             button.dataset.estado = 0;
+                            console.log("Cambio de estado 2");
                         }
                     }
                 });   
@@ -817,6 +819,7 @@ export default {
                         if (valor == 0) {
                             this.encendido_riego_norte_a_6 = true;
                             button.dataset.estado = 1;
+                            console.log("Cambio de estado Riego 6");
                         } else{
                             this.encendido_riego_norte_a_6 = false;
                             button.dataset.estado = 0;
