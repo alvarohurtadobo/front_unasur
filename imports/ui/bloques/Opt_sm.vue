@@ -3,11 +3,11 @@
         <div class="titulo">
             <h1 ref="estado_sm" v-on:click="estado_sm">Sala Multiple</h1>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-12" style="margin: 1% 0 2% 0;">
                 <button class="btn btn-lg btn-danger" v-on:click="estado_sm">Traer Estado</button>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-md-4">
                 <!-- <button class="btn btn-warning">Sala de Convensiones</button> -->
@@ -80,7 +80,7 @@
                 </div>
                 <div>
                     <button ref="sm_ctrl_energia" class="btn" v-bind:class="[ encendido_sm_ctrl_energia ? 'btn-warning' : 'btn-primary' ]" v-on:click='sm_ctrl_energia' data-estado="0"><i class="fa fa-bolt"></i> Niveles de Energía</button> 
-                    <table class="table table-condensed table-striped">
+                    <table class="table table-dark table-condensed table-striped">
                         <thead>
                             <tr>
                                 <th>Linea</th>

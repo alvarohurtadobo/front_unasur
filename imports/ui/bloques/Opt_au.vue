@@ -44,6 +44,7 @@
                         <button ref="au_prin_mezanine" class="btn" v-bind:class="[encendido_au_prin_mezanine ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_mezanine' data-estado="0"><i class="fa fa-bolt"></i> Mezanine</button>
                         <button ref="au_prin_pas_traduc" class="btn" v-bind:class="[encendido_au_prin_pas_traduc ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_pas_traduc' data-estado="0"><i class="fa fa-bolt"></i> Pasillo Traducción</button>
                         <button ref="au_prin_ofi_traduc" class="btn" v-bind:class="[encendido_au_prin_ofi_traduc ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_ofi_traduc' data-estado="0"><i class="fa fa-bolt"></i> Oficina Traducción</button>
+                        <button ref="au_prin_laterales" class="btn" v-bind:class="[encendido_au_prin_laterales ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_laterales' data-estado="0"><i class="fa fa-bolt"></i> Luces Laterales</button>
                     </div>
 
                 </div>
@@ -107,6 +108,7 @@ export default {
             encendido_au_prin_ofi_traduc: Boolean,
             encendido_au_pasillo_gradas: Boolean,
             encendido_au_cafeteria: Boolean,
+            encendido_au_prin_laterales: Boolean,
     },
     methods: {  
         au_ing() {
@@ -729,6 +731,29 @@ export default {
                                 button.dataset.estado = '1';
                             } else{
                                 this.encendido_au_cafeteria = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_prin_laterales() {
+            let bloque_1 = new Array();
+            bloque_1 = ['5/0/4'];
+            const button = this.$refs.au_prin_laterales
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_prin_laterales = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_prin_laterales = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
