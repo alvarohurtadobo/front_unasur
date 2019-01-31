@@ -92,10 +92,10 @@ export default {
                     if (!error) {
                         console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                         if (valor == '0') {
-                            this.encendido_super_vip = false;
+                            this.encendido_super_vip = true;
                             button.dataset.estado = '1';
                         } else{
-                            this.encendido_super_vip = true;
+                            this.encendido_super_vip = false;
                             button.dataset.estado = '0';
                         }
                     } else{
@@ -122,10 +122,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_s_reuniones = false;
+                                this.encendido_s_reuniones = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_s_reuniones = true;
+                                this.encendido_s_reuniones = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -139,23 +139,16 @@ export default {
             const button = this.$refs.c_reuniones
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            if (valor == '0') {
-                this.encendido_c_reuniones = false;
-                
-            } else{
-                this.encendido_c_reuniones = true;
-                
-            }
                 let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_c_reuniones = false;
+                                this.encendido_c_reuniones = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_c_reuniones = true;
+                                this.encendido_c_reuniones = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -169,23 +162,16 @@ export default {
             const button = this.$refs.ing_vip
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            if (valor == '0') {
-                this.encendido_ing_vip = false;
-                
-            } else{
-                this.encendido_ing_vip = true;
-                
-            }
                 let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_ing_vip = false;
+                                this.encendido_ing_vip = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_ing_vip = true;
+                                this.encendido_ing_vip = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -206,10 +192,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_s_descanso = false;
+                                this.encendido_s_descanso = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_s_descanso = true;
+                                this.encendido_s_descanso = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -233,10 +219,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_dimm_1_down = false;
+                                this.encendido_dimm_1_down = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_dimm_1_down = true;
+                                this.encendido_dimm_1_down = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -260,10 +246,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_dimm_1_up = false;
+                                this.encendido_dimm_1_up = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_dimm_1_up = true;
+                                this.encendido_dimm_1_up = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -287,10 +273,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_dimm_2_down = false;
+                                this.encendido_dimm_2_down = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_dimm_2_down = true;
+                                this.encendido_dimm_2_down = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -314,10 +300,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_dimm_2_up = false;
+                                this.encendido_dimm_2_up = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_dimm_2_up = true;
+                                this.encendido_dimm_2_up = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -338,10 +324,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_live_rgb = false;
+                                this.encendido_live_rgb = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_live_rgb = true;
+                                this.encendido_live_rgb = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -362,10 +348,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_rgb_azul = false;
+                                this.encendido_rgb_azul = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_rgb_azul = true;
+                                this.encendido_rgb_azul = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -386,10 +372,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_rgb_verde = false;
+                                this.encendido_rgb_verde = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_rgb_verde = true;
+                                this.encendido_rgb_verde = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -410,10 +396,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_rgb_rojo = false;
+                                this.encendido_rgb_rojo = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_rgb_rojo = true;
+                                this.encendido_rgb_rojo = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -434,10 +420,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_rgb_plateado = false;
+                                this.encendido_rgb_plateado = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_rgb_plateado = true;
+                                this.encendido_rgb_plateado = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -458,10 +444,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_rgb_efecto_1 = false;
+                                this.encendido_rgb_efecto_1 = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_rgb_efecto_1 = true;
+                                this.encendido_rgb_efecto_1 = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -482,10 +468,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_rgb_efecto_2 = false;
+                                this.encendido_rgb_efecto_2 = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_rgb_efecto_2 = true;
+                                this.encendido_rgb_efecto_2 = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -506,10 +492,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_rgb_efecto_3 = false;
+                                this.encendido_rgb_efecto_3 = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_rgb_efecto_3 = true;
+                                this.encendido_rgb_efecto_3 = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -530,10 +516,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_rgb_efecto_4 = false;
+                                this.encendido_rgb_efecto_4 = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_rgb_efecto_4 = true;
+                                this.encendido_rgb_efecto_4 = false;
                                 button.dataset.estado = '0';
                             }
                         } else{

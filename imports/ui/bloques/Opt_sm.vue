@@ -78,31 +78,59 @@
                 <div class="titulo">
                     <h2 class="encendido">Control Energía</h2>
                 </div>
-                <div>
-                    <button ref="sm_ctrl_energia" class="btn" v-bind:class="[ encendido_sm_ctrl_energia ? 'btn-warning' : 'btn-primary' ]" v-on:click='sm_ctrl_energia' data-estado="0"><i class="fa fa-bolt"></i> Niveles de Energía</button> 
-                    <table class="table table-dark table-condensed table-striped">
-                        <thead>
-                            <tr>
-                                <th>Linea</th>
-                                <th>Voltage</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="color:#green;">
-                                <td>Linea 1</td>
-                                <td>{{dd_voltage_dd_linea_1}}</td>
-                            </tr>
-                            <tr>
-                                <td>Linea 2</td>
-                                <td>{{dd_voltage_dd_linea_2}}</td>
-                            </tr>
-                            <tr>
-                                <td>Linea 3</td>
-                                <td>{{dd_voltage_dd_linea_3}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="row">
+                    <div class="col-md-4">
+                        <button ref="sm_ctrl_energia" class="btn" v-bind:class="[ encendido_sm_ctrl_energia ? 'btn-warning' : 'btn-primary' ]" v-on:click='sm_ctrl_energia' data-estado="0"><i class="fa fa-bolt"></i> Niveles de Voltage</button> 
+                        <table class="table table-dark table-condensed table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Linea</th>
+                                    <th>Voltage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="color:#green;">
+                                    <td>Linea 1</td>
+                                    <td>{{dd_voltage_dd_linea_1}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Linea 2</td>
+                                    <td>{{dd_voltage_dd_linea_2}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Linea 3</td>
+                                    <td>{{dd_voltage_dd_linea_3}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-4">
+                        <button ref="sm_ctrl_energia" class="btn" v-bind:class="[ encendido_sm_ctrl_energia ? 'btn-warning' : 'btn-primary' ]" v-on:click='sm_ctrl_energia' data-estado="0"><i class="fa fa-bolt"></i> Niveles de Energía</button> 
+                        <table class="table table-dark table-condensed table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Linea</th>
+                                    <th>Voltage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="color:#green;">
+                                    <td>Linea 1</td>
+                                    <td>{{dd_voltage_dd_linea_1}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Linea 2</td>
+                                    <td>{{dd_voltage_dd_linea_2}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Linea 3</td>
+                                    <td>{{dd_voltage_dd_linea_3}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -159,13 +187,6 @@ export default {
                 (error, result) => {
                     if (!error) {
                         let vv = result.data[0]; 
-                        // Object.keys(vv).forEach(key => {
-                        //     if (vv[key]==1) {
-                        //         this.encendido_sm_b1 = true;
-                        //     } else{
-                        //         this.encendido_sm_b1 = false;
-                        //     }
-                        // });
                     } else{
                         console.log(error);
                     }

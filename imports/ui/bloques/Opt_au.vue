@@ -123,10 +123,10 @@ export default {
                     if (!error) {
                         console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                         if (valor == '0') {
-                            this.encendido_au_ing = false;
+                            this.encendido_au_ing = true;
                             button.dataset.estado = '1';
                         } else{
-                            this.encendido_au_ing = true;
+                            this.encendido_au_ing = false;
                             button.dataset.estado = '0';
                         }
                     } else{
@@ -153,10 +153,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_rampa_sud = false;
+                                this.encendido_au_rampa_sud = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_rampa_sud = true;
+                                this.encendido_au_rampa_sud = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -177,10 +177,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_clispas_ramp_sud = false;
+                                this.encendido_au_clispas_ramp_sud = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_clispas_ramp_sud = true;
+                                this.encendido_au_clispas_ramp_sud = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -207,10 +207,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_p4 = false;
+                                this.encendido_au_p4 = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_p4 = true;
+                                this.encendido_au_p4 = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -237,10 +237,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_p1 = false;
+                                this.encendido_au_p1 = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_p1 = true;
+                                this.encendido_au_p1 = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -254,23 +254,16 @@ export default {
             const button = this.$refs.au_pas_prin
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            if (valor == '0') {
-                this.encendido_au_pas_prin = false;
-                
-            } else{
-                this.encendido_au_pas_prin = true;
-                
-            }
                 let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_pas_prin = false;
+                                this.encendido_au_pas_prin = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_pas_prin = true;
+                                this.encendido_au_pas_prin = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -290,10 +283,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_pas_norte = false;
+                                this.encendido_au_pas_norte = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_pas_norte = true;
+                                this.encendido_au_pas_norte = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -313,10 +306,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_puerta_1_der = false;
+                                this.encendido_au_puerta_1_der = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_puerta_1_der = true;
+                                this.encendido_au_puerta_1_der = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -336,10 +329,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_puerta_2_izq = false;
+                                this.encendido_au_puerta_2_izq = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_puerta_2_izq = true;
+                                this.encendido_au_puerta_2_izq = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -359,10 +352,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_puerta_disc_esc = false;
+                                this.encendido_au_puerta_disc_esc = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_puerta_disc_esc = true;
+                                this.encendido_au_puerta_disc_esc = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -382,10 +375,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_pasillo_gradas = false;
+                                this.encendido_au_pasillo_gradas = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_pasillo_gradas = true;
+                                this.encendido_au_pasillo_gradas = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -405,10 +398,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_blq_norte = false;
+                                this.encendido_au_prin_blq_norte = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_blq_norte = true;
+                                this.encendido_au_prin_blq_norte = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -428,10 +421,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_blq_sud = false;
+                                this.encendido_au_prin_blq_sud = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_blq_sud = true;
+                                this.encendido_au_prin_blq_sud = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -451,10 +444,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_blq_posterior = false;
+                                this.encendido_au_prin_blq_posterior = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_blq_posterior = true;
+                                this.encendido_au_prin_blq_posterior = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -474,10 +467,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_blq_central = false;
+                                this.encendido_au_prin_blq_central = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_blq_central = true;
+                                this.encendido_au_prin_blq_central = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -497,10 +490,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_escenario = false;
+                                this.encendido_au_prin_escenario = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_escenario = true;
+                                this.encendido_au_prin_escenario = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -520,10 +513,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_mezanine = false;
+                                this.encendido_au_prin_mezanine = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_mezanine = true;
+                                this.encendido_au_prin_mezanine = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -543,10 +536,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_ab_pasillo = false;
+                                this.encendido_au_ab_pasillo = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_ab_pasillo = true;
+                                this.encendido_au_ab_pasillo = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -566,10 +559,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_a_butacas = false;
+                                this.encendido_au_a_butacas = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_a_butacas = true;
+                                this.encendido_au_a_butacas = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -589,10 +582,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_a_escenario = false;
+                                this.encendido_au_a_escenario = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_a_escenario = true;
+                                this.encendido_au_a_escenario = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -612,10 +605,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_b_butacas = false;
+                                this.encendido_au_b_butacas = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_b_butacas = true;
+                                this.encendido_au_b_butacas = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -635,10 +628,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_b_escenario = false;
+                                this.encendido_au_b_escenario = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_b_escenario = true;
+                                this.encendido_au_b_escenario = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -658,10 +651,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_haz_luz = false;
+                                this.encendido_au_prin_haz_luz = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_haz_luz = true;
+                                this.encendido_au_prin_haz_luz = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -681,10 +674,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_pas_traduc = false;
+                                this.encendido_au_prin_pas_traduc = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_pas_traduc = true;
+                                this.encendido_au_prin_pas_traduc = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -704,10 +697,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_ofi_traduc = false;
+                                this.encendido_au_prin_ofi_traduc = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_ofi_traduc = true;
+                                this.encendido_au_prin_ofi_traduc = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -727,10 +720,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_cafeteria = false;
+                                this.encendido_au_cafeteria = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_cafeteria = true;
+                                this.encendido_au_cafeteria = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -750,10 +743,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_laterales = false;
+                                this.encendido_au_prin_laterales = true;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_laterales = true;
+                                this.encendido_au_prin_laterales = false;
                                 button.dataset.estado = '0';
                             }
                         } else{
