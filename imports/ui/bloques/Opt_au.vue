@@ -6,18 +6,18 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <button ref="au_ing" class="btn" v-bind:class="[encendido_au_ing ? 'btn-warning' : 'btn-primary']" v-on:click='au_ing' data-estado="0"><i class="fa fa-bolt"></i> Ingreso</button>
-                    <button ref="au_rampa_sud" class="btn" v-bind:class="[encendido_au_rampa_sud ? 'btn-warning' : 'btn-primary']" v-on:click='au_rampa_sud' data-estado="0"><i class="fa fa-bolt"></i> Ilum. Rampa Sud</button>
-                    <button ref="au_prin_laterales" class="btn" v-bind:class="[encendido_au_prin_laterales ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_laterales' data-estado="0"><i class="fa fa-bolt"></i> Luces Laterales</button>
-                    <button ref="au_pasillo_mezzanine" class="btn" v-bind:class="[encendido_au_pasillo_mezzanine ? 'btn-warning' : 'btn-primary']" v-on:click='au_pasillo_mezzanine' data-estado="0"><i class="fa fa-bolt"></i> Pasillo Mezzanine</button>
-                    <button ref="au_p1" class="btn" v-bind:class="[encendido_au_p1 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p1' data-estado="0"><i class="fa fa-bolt"></i> Iluminación P1</button>
-                    <button ref="au_p2" class="btn" v-bind:class="[encendido_au_p2 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p2' data-estado="0"><i class="fa fa-bolt"></i> Iluminación P2</button>
-                    <button ref="au_p4" class="btn" v-bind:class="[encendido_au_p4 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p4' data-estado="0"><i class="fa fa-bolt"></i> Iluminación P4</button>
-                    <button ref="au_pas_norte" class="btn" v-bind:class="[encendido_au_pas_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_pas_norte' data-estado="0"><i class="fa fa-bolt"></i> Pasillo Norte</button>
-                    <button ref="au_clispas_ramp_sud" class="btn" v-bind:class="[encendido_au_clispas_ramp_sud ? 'btn-warning' : 'btn-primary']" v-on:click='au_clispas_ramp_sud' data-estado="0"><i class="fa fa-bolt"></i> Chispas Rampa Sud</button>
-                    <button ref="au_pasillo_gradas" class="btn" v-bind:class="[encendido_au_pasillo_gradas ? 'btn-warning' : 'btn-primary']" v-on:click='au_pasillo_gradas' data-estado="0"><i class="fa fa-bolt"></i> Pasillo gradas</button>
-                    <button ref="au_cafeteria" class="btn" v-bind:class="[encendido_au_cafeteria ? 'btn-warning' : 'btn-primary']" v-on:click='au_cafeteria' data-estado="0"><i class="fa fa-bolt"></i> Cafetería</button>
-                    <button ref="au_recib_ofis" class="btn" v-bind:class="[encendido_au_recib_ofis ? 'btn-warning' : 'btn-primary']" v-on:click='au_recib_ofis' data-estado="0"><i class="fa fa-bolt"></i> Recibidor Oficinas</button>
+                    <button ref="au_ing" class="btn" v-bind:class="[encendido_au_ing ? 'btn-warning' : 'btn-primary']" v-on:click='au_ing' data-estado="1"><i class="fa fa-bolt"></i> Ingreso</button>
+                    <button ref="au_rampa_sud" class="btn" v-bind:class="[encendido_au_rampa_sud ? 'btn-warning' : 'btn-primary']" v-on:click='au_rampa_sud' data-estado="1"><i class="fa fa-bolt"></i> Ilum. Rampa Sud</button>
+                    <button ref="au_prin_laterales" class="btn" v-bind:class="[encendido_au_prin_laterales ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_laterales' data-estado="1"><i class="fa fa-bolt"></i> Luces Laterales</button>
+                    <button ref="au_pasillo_mezzanine" class="btn" v-bind:class="[encendido_au_pasillo_mezzanine ? 'btn-warning' : 'btn-primary']" v-on:click='au_pasillo_mezzanine' data-estado="1"><i class="fa fa-bolt"></i> Pasillo Mezzanine</button>
+                    <button ref="au_p1" class="btn" v-bind:class="[encendido_au_p1 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p1' data-estado="1"><i class="fa fa-bolt"></i> Iluminación P1</button>
+                    <button ref="au_p2" class="btn" v-bind:class="[encendido_au_p2 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p2' data-estado="1"><i class="fa fa-bolt"></i> Iluminación P2</button>
+                    <button ref="au_p4" class="btn" v-bind:class="[encendido_au_p4 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p4' data-estado="1"><i class="fa fa-bolt"></i> Iluminación P4</button>
+                    <button ref="au_pas_norte" class="btn" v-bind:class="[encendido_au_pas_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_pas_norte' data-estado="1"><i class="fa fa-bolt"></i> Pasillo Norte</button>
+                    <button ref="au_clispas_ramp_sud" class="btn" v-bind:class="[encendido_au_clispas_ramp_sud ? 'btn-warning' : 'btn-primary']" v-on:click='au_clispas_ramp_sud' data-estado="1"><i class="fa fa-bolt"></i> Chispas Rampa Sud</button>
+                    <button ref="au_pasillo_gradas" class="btn" v-bind:class="[encendido_au_pasillo_gradas ? 'btn-warning' : 'btn-primary']" v-on:click='au_pasillo_gradas' data-estado="1"><i class="fa fa-bolt"></i> Pasillo gradas</button>
+                    <button ref="au_cafeteria" class="btn" v-bind:class="[encendido_au_cafeteria ? 'btn-warning' : 'btn-primary']" v-on:click='au_cafeteria' data-estado="1"><i class="fa fa-bolt"></i> Cafetería</button>
+                    <button ref="au_recib_ofis" class="btn" v-bind:class="[encendido_au_recib_ofis ? 'btn-warning' : 'btn-primary']" v-on:click='au_recib_ofis' data-estado="1"><i class="fa fa-bolt"></i> Recibidor Oficinas</button>
                 </div>
             </div>
             <div class="col-md-12">
@@ -25,13 +25,13 @@
                     <h2 class="encendido">Accesos Auditorio</h2>
                 </div>
                 <div>
-                    <button ref="au_puerta_disc_esc" class="btn" v-bind:class="[encendido_au_puerta_disc_esc ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_disc_esc' data-estado="0"><i class="fa fa-bolt"></i> Puerta Escaleras</button>
-                    <button ref="au_puerta_2_izq" class="btn" v-bind:class="[encendido_au_puerta_2_izq ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_2_izq' data-estado="0"><i class="fa fa-bolt"></i> Puerta Izquierda</button>
-                    <button ref="au_puerta_1_der" class="btn" v-bind:class="[encendido_au_puerta_1_der ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_1_der' data-estado="0"><i class="fa fa-bolt"></i> Puerta Derecha</button>
-                    <button ref="au_puerta_ofi_1" class="btn" v-bind:class="[encendido_au_puerta_ofi_1 ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_ofi_1' data-estado="0"><i class="fa fa-bolt"></i> Puerta Oficinas 1</button>
-                    <button ref="au_puerta_ofi_2" class="btn" v-bind:class="[encendido_au_puerta_ofi_2 ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_ofi_2' data-estado="0"><i class="fa fa-bolt"></i> Puerta Oficinas 2</button>
-                    <button ref="au_puerta_ofi_3" class="btn" v-bind:class="[encendido_au_puerta_ofi_3 ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_ofi_3' data-estado="0"><i class="fa fa-bolt"></i> Puerta Oficinas 3</button>
-                    <button ref="au_puerta_ofi_escalera" class="btn" v-bind:class="[encendido_au_puerta_ofi_escalera ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_ofi_escalera' data-estado="0"><i class="fa fa-bolt"></i> Puerta Ofi. Gradas</button>
+                    <button ref="au_puerta_disc_esc" class="btn" v-bind:class="[encendido_au_puerta_disc_esc ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_disc_esc' data-estado="1"><i class="fa fa-bolt"></i> Puerta Escaleras</button>
+                    <button ref="au_puerta_2_izq" class="btn" v-bind:class="[encendido_au_puerta_2_izq ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_2_izq' data-estado="1"><i class="fa fa-bolt"></i> Puerta Izquierda</button>
+                    <button ref="au_puerta_1_der" class="btn" v-bind:class="[encendido_au_puerta_1_der ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_1_der' data-estado="1"><i class="fa fa-bolt"></i> Puerta Derecha</button>
+                    <button ref="au_puerta_ofi_1" class="btn" v-bind:class="[encendido_au_puerta_ofi_1 ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_ofi_1' data-estado="1"><i class="fa fa-bolt"></i> Puerta Oficinas 1</button>
+                    <button ref="au_puerta_ofi_2" class="btn" v-bind:class="[encendido_au_puerta_ofi_2 ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_ofi_2' data-estado="1"><i class="fa fa-bolt"></i> Puerta Oficinas 2</button>
+                    <button ref="au_puerta_ofi_3" class="btn" v-bind:class="[encendido_au_puerta_ofi_3 ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_ofi_3' data-estado="1"><i class="fa fa-bolt"></i> Puerta Oficinas 3</button>
+                    <button ref="au_puerta_ofi_escalera" class="btn" v-bind:class="[encendido_au_puerta_ofi_escalera ? 'btn-warning' : 'btn-primary']" v-on:click='au_puerta_ofi_escalera' data-estado="1"><i class="fa fa-bolt"></i> Puerta Ofi. Gradas</button>
                 </div>
             </div>
             <div class="col-md-12">
@@ -40,24 +40,24 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <button ref="au_pas_prin" class="btn" v-bind:class="[encendido_au_pas_prin ? 'btn-warning' : 'btn-primary']" v-on:click='au_pas_prin' data-estado="0"><i class="fa fa-bolt"></i> Pasillo Principal</button>
-                        <!-- <button ref="au_prin_haz_luz" class="btn" v-bind:class="[encendido_au_prin_haz_luz ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_haz_luz' data-estado="0"><i class="fa fa-bolt"></i> Haz de luz</button> -->
-                        <button ref="au_prin_blq_norte" class="btn" v-bind:class="[encendido_au_prin_blq_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_blq_norte' data-estado="0"><i class="fa fa-bolt"></i> Bloque Norte</button>
-                        <button ref="au_prin_blq_sud" class="btn" v-bind:class="[encendido_au_prin_blq_sud ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_blq_sud' data-estado="0"><i class="fa fa-bolt"></i> Bloque Sud</button>
-                        <button ref="au_prin_blq_central" class="btn" v-bind:class="[encendido_au_prin_blq_central ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_blq_central' data-estado="0"><i class="fa fa-bolt"></i> Bloque central</button>
-                        <button ref="au_prin_blq_posterior" class="btn" v-bind:class="[encendido_au_prin_blq_posterior ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_blq_posterior' data-estado="0"><i class="fa fa-bolt"></i> Bloque Posterior</button>
-                        <button ref="au_prin_escenario" class="btn" v-bind:class="[encendido_au_prin_escenario ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_escenario' data-estado="0"><i class="fa fa-bolt"></i> Escenario</button>
-                        <button ref="au_prin_esc_diserta" class="btn" v-bind:class="[encendido_au_prin_esc_diserta ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_diserta' data-estado="0"><i class="fa fa-bolt"></i> Modo Disertación</button>
-                        <button ref="au_prin_esc_limpieza" class="btn" v-bind:class="[encendido_au_prin_esc_limpieza ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_limpieza' data-estado="0"><i class="fa fa-bolt"></i> Modo Limpieza</button>
-                        <button ref="au_prin_esc_gradas" class="btn" v-bind:class="[encendido_au_prin_esc_gradas ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_gradas' data-estado="0"><i class="fa fa-bolt"></i> Modo Gradas</button>
-                        <button ref="au_prin_esc_coro" class="btn" v-bind:class="[encendido_au_prin_esc_coro ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_coro' data-estado="0"><i class="fa fa-bolt"></i> Modo Coro</button>
-                        <button ref="au_prin_esc_tenue" class="btn" v-bind:class="[encendido_au_prin_esc_tenue ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_tenue' data-estado="0"><i class="fa fa-bolt"></i> Modo Tenue</button>
+                        <button ref="au_pas_prin" class="btn" v-bind:class="[encendido_au_pas_prin ? 'btn-warning' : 'btn-primary']" v-on:click='au_pas_prin' data-estado="1"><i class="fa fa-bolt"></i> Pasillo Principal</button>
+                        <!-- <button ref="au_prin_haz_luz" class="btn" v-bind:class="[encendido_au_prin_haz_luz ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_haz_luz' data-estado="1"><i class="fa fa-bolt"></i> Haz de luz</button> -->
+                        <button ref="au_prin_blq_norte" class="btn" v-bind:class="[encendido_au_prin_blq_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_blq_norte' data-estado="1"><i class="fa fa-bolt"></i> Bloque Norte</button>
+                        <button ref="au_prin_blq_sud" class="btn" v-bind:class="[encendido_au_prin_blq_sud ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_blq_sud' data-estado="1"><i class="fa fa-bolt"></i> Bloque Sud</button>
+                        <button ref="au_prin_blq_central" class="btn" v-bind:class="[encendido_au_prin_blq_central ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_blq_central' data-estado="1"><i class="fa fa-bolt"></i> Bloque central</button>
+                        <button ref="au_prin_blq_posterior" class="btn" v-bind:class="[encendido_au_prin_blq_posterior ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_blq_posterior' data-estado="1"><i class="fa fa-bolt"></i> Bloque Posterior</button>
+                        <button ref="au_prin_escenario" class="btn" v-bind:class="[encendido_au_prin_escenario ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_escenario' data-estado="1"><i class="fa fa-bolt"></i> Escenario</button>
+                        <button ref="au_prin_esc_diserta" class="btn" v-bind:class="[encendido_au_prin_esc_diserta ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_diserta' data-estado="1"><i class="fa fa-bolt"></i> Modo Disertación</button>
+                        <button ref="au_prin_esc_limpieza" class="btn" v-bind:class="[encendido_au_prin_esc_limpieza ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_limpieza' data-estado="1"><i class="fa fa-bolt"></i> Modo Limpieza</button>
+                        <button ref="au_prin_esc_gradas" class="btn" v-bind:class="[encendido_au_prin_esc_gradas ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_gradas' data-estado="1"><i class="fa fa-bolt"></i> Modo Gradas</button>
+                        <button ref="au_prin_esc_coro" class="btn" v-bind:class="[encendido_au_prin_esc_coro ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_coro' data-estado="1"><i class="fa fa-bolt"></i> Modo Coro</button>
+                        <button ref="au_prin_esc_tenue" class="btn" v-bind:class="[encendido_au_prin_esc_tenue ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_tenue' data-estado="1"><i class="fa fa-bolt"></i> Modo Tenue</button>
                     
                     </div>
                     <div class="col-md-6">
-                        <button ref="au_prin_mezanine" class="btn" v-bind:class="[encendido_au_prin_mezanine ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_mezanine' data-estado="0"><i class="fa fa-bolt"></i> Mezanine</button>
-                        <button ref="au_prin_pas_traduc" class="btn" v-bind:class="[encendido_au_prin_pas_traduc ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_pas_traduc' data-estado="0"><i class="fa fa-bolt"></i> Pasillo Traducción</button>
-                        <button ref="au_prin_ofi_traduc" class="btn" v-bind:class="[encendido_au_prin_ofi_traduc ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_ofi_traduc' data-estado="0"><i class="fa fa-bolt"></i> Oficina Traducción</button>
+                        <button ref="au_prin_mezanine" class="btn" v-bind:class="[encendido_au_prin_mezanine ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_mezanine' data-estado="1"><i class="fa fa-bolt"></i> Mezanine</button>
+                        <button ref="au_prin_pas_traduc" class="btn" v-bind:class="[encendido_au_prin_pas_traduc ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_pas_traduc' data-estado="1"><i class="fa fa-bolt"></i> Pasillo Traducción</button>
+                        <button ref="au_prin_ofi_traduc" class="btn" v-bind:class="[encendido_au_prin_ofi_traduc ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_ofi_traduc' data-estado="1"><i class="fa fa-bolt"></i> Oficina Traducción</button>
                         
                     </div>
                 </div>
@@ -67,8 +67,8 @@
                     <h2 class="encendido">Auditorio A</h2>
                 </div>
                 <div>
-                    <button ref="au_a_butacas" class="btn" v-bind:class="[encendido_au_a_butacas ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_butacas' data-estado="0"><i class="fa fa-bolt"></i> Butacas Aud. A</button>
-                    <button ref="au_a_escenario" class="btn" v-bind:class="[encendido_au_a_escenario ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_escenario' data-estado="0"><i class="fa fa-bolt"></i> Escenario Aud. A</button>
+                    <button ref="au_a_butacas" class="btn" v-bind:class="[encendido_au_a_butacas ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_butacas' data-estado="1"><i class="fa fa-bolt"></i> Butacas Aud. A</button>
+                    <button ref="au_a_escenario" class="btn" v-bind:class="[encendido_au_a_escenario ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_escenario' data-estado="1"><i class="fa fa-bolt"></i> Escenario Aud. A</button>
                 </div>
             </div>
             <div class="col-md-2">
@@ -76,7 +76,7 @@
                     <h2 class="encendido">&nbsp; </h2>
                 </div>
                 <div>
-                    <button ref="au_ab_pasillo" class="btn" v-bind:class="[encendido_au_ab_pasillo ? 'btn-warning' : 'btn-primary']" v-on:click='au_ab_pasillo' data-estado="0"><i class="fa fa-bolt"></i> Pasillo A/B</button>
+                    <button ref="au_ab_pasillo" class="btn" v-bind:class="[encendido_au_ab_pasillo ? 'btn-warning' : 'btn-primary']" v-on:click='au_ab_pasillo' data-estado="1"><i class="fa fa-bolt"></i> Pasillo A/B</button>
                 </div>
             </div>
             <div class="col-md-5">
@@ -84,8 +84,8 @@
                     <h2 class="encendido">Auditorio B</h2>
                 </div>
                 <div>
-                    <button ref="au_b_butacas" class="btn" v-bind:class="[encendido_au_b_butacas ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_butacas' data-estado="0"><i class="fa fa-bolt"></i> Butacas Aud. B</button>
-                    <button ref="au_b_escenario" class="btn" v-bind:class="[encendido_au_b_escenario ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_escenario' data-estado="0"><i class="fa fa-bolt"></i> Escenario Aud. B</button>
+                    <button ref="au_b_butacas" class="btn" v-bind:class="[encendido_au_b_butacas ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_butacas' data-estado="1"><i class="fa fa-bolt"></i> Butacas Aud. B</button>
+                    <button ref="au_b_escenario" class="btn" v-bind:class="[encendido_au_b_escenario ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_escenario' data-estado="1"><i class="fa fa-bolt"></i> Escenario Aud. B</button>
                 </div>
             </div>
         </div>
@@ -148,10 +148,10 @@ export default {
                     if (!error) {
                         console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                         if (valor == '0') {
-                            this.encendido_au_ing = true;
+                            this.encendido_au_ing = false;
                             button.dataset.estado = '1';
                         } else{
-                            this.encendido_au_ing = false;
+                            this.encendido_au_ing = true;
                             button.dataset.estado = '0';
                         }
                     } else{
@@ -165,23 +165,16 @@ export default {
             const button = this.$refs.au_rampa_sud
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            if (valor == '0') {
-                this.encendido_au_rampa_sud = false;
-                
-            } else{
-                this.encendido_au_rampa_sud = true;
-                
-            }
                 let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_rampa_sud = true;
+                                this.encendido_au_rampa_sud = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_rampa_sud = false;
+                                this.encendido_au_rampa_sud = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -202,10 +195,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_clispas_ramp_sud = true;
+                                this.encendido_au_clispas_ramp_sud = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_clispas_ramp_sud = false;
+                                this.encendido_au_clispas_ramp_sud = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -226,10 +219,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_pasillo_mezzanine = true;
+                                this.encendido_au_pasillo_mezzanine = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_pasillo_mezzanine = false;
+                                this.encendido_au_pasillo_mezzanine = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -243,23 +236,16 @@ export default {
             const button = this.$refs.au_p1
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            if (valor == '0') {
-                this.encendido_au_p1 = false;
-                
-            } else{
-                this.encendido_au_p1 = true;
-                
-            }
                 let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_p1 = true;
+                                this.encendido_au_p1 = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_p1 = false;
+                                this.encendido_au_p1 = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -279,10 +265,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_p2 = true;
+                                this.encendido_au_p2 = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_p2 = false;
+                                this.encendido_au_p2 = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -302,10 +288,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_p4 = true;
+                                this.encendido_au_p4 = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_p4 = false;
+                                this.encendido_au_p4 = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -325,10 +311,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_pas_prin = true;
+                                this.encendido_au_pas_prin = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_pas_prin = false;
+                                this.encendido_au_pas_prin = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -348,10 +334,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_pas_norte = true;
+                                this.encendido_au_pas_norte = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_pas_norte = false;
+                                this.encendido_au_pas_norte = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -371,10 +357,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_puerta_1_der = true;
+                                this.encendido_au_puerta_1_der = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_puerta_1_der = false;
+                                this.encendido_au_puerta_1_der = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -394,10 +380,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_puerta_2_izq = true;
+                                this.encendido_au_puerta_2_izq = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_puerta_2_izq = false;
+                                this.encendido_au_puerta_2_izq = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -417,10 +403,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_puerta_disc_esc = true;
+                                this.encendido_au_puerta_disc_esc = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_puerta_disc_esc = false;
+                                this.encendido_au_puerta_disc_esc = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -440,10 +426,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_pasillo_gradas = true;
+                                this.encendido_au_pasillo_gradas = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_pasillo_gradas = false;
+                                this.encendido_au_pasillo_gradas = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -463,10 +449,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_blq_norte = true;
+                                this.encendido_au_prin_blq_norte = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_blq_norte = false;
+                                this.encendido_au_prin_blq_norte = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -486,10 +472,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_blq_sud = true;
+                                this.encendido_au_prin_blq_sud = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_blq_sud = false;
+                                this.encendido_au_prin_blq_sud = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -509,10 +495,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_blq_posterior = true;
+                                this.encendido_au_prin_blq_posterior = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_blq_posterior = false;
+                                this.encendido_au_prin_blq_posterior = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -532,10 +518,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_blq_central = true;
+                                this.encendido_au_prin_blq_central = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_blq_central = false;
+                                this.encendido_au_prin_blq_central = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -555,10 +541,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_escenario = true;
+                                this.encendido_au_prin_escenario = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_escenario = false;
+                                this.encendido_au_prin_escenario = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -578,10 +564,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_mezanine = true;
+                                this.encendido_au_prin_mezanine = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_mezanine = false;
+                                this.encendido_au_prin_mezanine = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -601,10 +587,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_ab_pasillo = true;
+                                this.encendido_au_ab_pasillo = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_ab_pasillo = false;
+                                this.encendido_au_ab_pasillo = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -624,10 +610,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_a_butacas = true;
+                                this.encendido_au_a_butacas = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_a_butacas = false;
+                                this.encendido_au_a_butacas = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -647,10 +633,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_a_escenario = true;
+                                this.encendido_au_a_escenario = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_a_escenario = false;
+                                this.encendido_au_a_escenario = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -670,10 +656,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_b_butacas = true;
+                                this.encendido_au_b_butacas = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_b_butacas = false;
+                                this.encendido_au_b_butacas = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -693,10 +679,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_b_escenario = true;
+                                this.encendido_au_b_escenario = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_b_escenario = false;
+                                this.encendido_au_b_escenario = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -716,10 +702,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_haz_luz = true;
+                                this.encendido_au_prin_haz_luz = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_haz_luz = false;
+                                this.encendido_au_prin_haz_luz = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -739,10 +725,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_pas_traduc = true;
+                                this.encendido_au_prin_pas_traduc = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_pas_traduc = false;
+                                this.encendido_au_prin_pas_traduc = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -762,10 +748,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_ofi_traduc = true;
+                                this.encendido_au_prin_ofi_traduc = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_ofi_traduc = false;
+                                this.encendido_au_prin_ofi_traduc = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -785,10 +771,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_cafeteria = true;
+                                this.encendido_au_cafeteria = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_cafeteria = false;
+                                this.encendido_au_cafeteria = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -808,10 +794,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_laterales = true;
+                                this.encendido_au_prin_laterales = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_laterales = false;
+                                this.encendido_au_prin_laterales = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -831,10 +817,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_puerta_ofi_1 = true;
+                                this.encendido_au_puerta_ofi_1 = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_puerta_ofi_1 = false;
+                                this.encendido_au_puerta_ofi_1 = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -854,10 +840,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_puerta_ofi_2 = true;
+                                this.encendido_au_puerta_ofi_2 = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_puerta_ofi_2 = false;
+                                this.encendido_au_puerta_ofi_2 = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -877,10 +863,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_puerta_ofi_3 = true;
+                                this.encendido_au_puerta_ofi_3 = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_puerta_ofi_3 = false;
+                                this.encendido_au_puerta_ofi_3 = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -900,10 +886,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_puerta_ofi_escalera = true;
+                                this.encendido_au_puerta_ofi_escalera = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_puerta_ofi_escalera = false;
+                                this.encendido_au_puerta_ofi_escalera = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -923,10 +909,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_recib_ofis = true;
+                                this.encendido_au_recib_ofis = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_recib_ofis = false;
+                                this.encendido_au_recib_ofis = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -946,10 +932,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_esc_limpieza = true;
+                                this.encendido_au_prin_esc_limpieza = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_esc_limpieza = false;
+                                this.encendido_au_prin_esc_limpieza = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -969,10 +955,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_esc_gradas = true;
+                                this.encendido_au_prin_esc_gradas = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_esc_gradas = false;
+                                this.encendido_au_prin_esc_gradas = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -992,10 +978,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_esc_diserta = true;
+                                this.encendido_au_prin_esc_diserta = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_esc_diserta = false;
+                                this.encendido_au_prin_esc_diserta = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -1015,10 +1001,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_esc_coro = true;
+                                this.encendido_au_prin_esc_coro = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_esc_coro = false;
+                                this.encendido_au_prin_esc_coro = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -1038,10 +1024,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_esc_tenue = true;
+                                this.encendido_au_prin_esc_tenue = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_esc_tenue = false;
+                                this.encendido_au_prin_esc_tenue = true;
                                 button.dataset.estado = '0';
                             }
                         } else{

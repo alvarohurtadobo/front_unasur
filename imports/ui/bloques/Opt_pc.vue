@@ -5,30 +5,30 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <button ref="pc_pb" class="btn" v-bind:class="[encendido_pc_pb ? 'btn-warning' : 'btn-primary']" v-on:click='pc_pb' data-estado="0"><i class="fa fa-bolt"></i> Planta Baja</button>
-                <button ref="pc_p1" class="btn" v-bind:class="[encendido_pc_p1 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p1' data-estado="0"><i class="fa fa-bolt"></i> Primer Piso</button>
-                <button ref="pc_p2" class="btn" v-bind:class="[encendido_pc_p2 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p2' data-estado="0"><i class="fa fa-bolt"></i> Segundo Piso</button>
-                <button ref="pc_p3" class="btn" v-bind:class="[encendido_pc_p3 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p3' data-estado="0"><i class="fa fa-bolt"></i> Tercer Piso</button>
+                <button ref="pc_pb" class="btn" v-bind:class="[encendido_pc_pb ? 'btn-warning' : 'btn-primary']" v-on:click='pc_pb' data-estado="1"><i class="fa fa-bolt"></i> Planta Baja</button>
+                <button ref="pc_p1" class="btn" v-bind:class="[encendido_pc_p1 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p1' data-estado="1"><i class="fa fa-bolt"></i> Primer Piso</button>
+                <button ref="pc_p2" class="btn" v-bind:class="[encendido_pc_p2 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p2' data-estado="1"><i class="fa fa-bolt"></i> Segundo Piso</button>
+                <button ref="pc_p3" class="btn" v-bind:class="[encendido_pc_p3 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p3' data-estado="1"><i class="fa fa-bolt"></i> Tercer Piso</button>
             </div>
             <div class="col-md-4">
-                <button ref="pc_p4" class="btn" v-bind:class="[encendido_pc_p4 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p4' data-estado="0"><i class="fa fa-bolt"></i> Cuarto piso</button>
-                <button ref="pc_p5" class="btn" v-bind:class="[encendido_pc_p5 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p5' data-estado="0"><i class="fa fa-bolt"></i> Quinto piso</button>
-                <button ref="pc_techo" class="btn" v-bind:class="[encendido_pc_techo ? 'btn-warning' : 'btn-primary']" v-on:click='pc_techo' data-estado="0"><i class="fa fa-bolt"></i> Iluminación techo</button>
-                <button ref="pc_mirado" class="btn" v-bind:class="[encendido_pc_mirador ? 'btn-warning' : 'btn-primary']" v-on:click='pc_mirador' data-estado="0"><i class="fa fa-bolt"></i> Mirador</button>
-                <button ref="pc_banos" class="btn" v-bind:class="[encendido_pc_banos ? 'btn-warning' : 'btn-primary']" v-on:click='pc_banos' data-estado="0"><i class="fa fa-bolt"></i> Baños</button>
+                <button ref="pc_p4" class="btn" v-bind:class="[encendido_pc_p4 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p4' data-estado="1"><i class="fa fa-bolt"></i> Cuarto piso</button>
+                <button ref="pc_p5" class="btn" v-bind:class="[encendido_pc_p5 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p5' data-estado="1"><i class="fa fa-bolt"></i> Quinto piso</button>
+                <button ref="pc_techo" class="btn" v-bind:class="[encendido_pc_techo ? 'btn-warning' : 'btn-primary']" v-on:click='pc_techo' data-estado="1"><i class="fa fa-bolt"></i> Iluminación techo</button>
+                <button ref="pc_mirado" class="btn" v-bind:class="[encendido_pc_mirador ? 'btn-warning' : 'btn-primary']" v-on:click='pc_mirador' data-estado="1"><i class="fa fa-bolt"></i> Mirador</button>
+                <button ref="pc_banos" class="btn" v-bind:class="[encendido_pc_banos ? 'btn-warning' : 'btn-primary']" v-on:click='pc_banos' data-estado="1"><i class="fa fa-bolt"></i> Baños</button>
             </div>
             <div class="col-md-4">
-                <button ref="pc_ctrl" class="btn" v-bind:class="[encendido_pc_ctrl ? 'btn-warning' : 'btn-primary']" v-on:click='pc_ctrl' data-estado="0"><i class="fa fa-bolt"></i> Cuarto de Ctrl</button>
+                <button ref="pc_ctrl" class="btn" v-bind:class="[encendido_pc_ctrl ? 'btn-warning' : 'btn-primary']" v-on:click='pc_ctrl' data-estado="1"><i class="fa fa-bolt"></i> Cuarto de Ctrl</button>
             </div>
             <div class="col-md-12">
                 <div class="titulo">
                     <h2 class="encendido">Accesos Plaza de comidas</h2>
                 </div>
                  <div class="col-md-12">
-                    <button ref="pc_puerta_de_izq" class="btn" v-bind:class="[encendido_pc_puerta_de_izq ? 'btn-warning' : 'btn-primary']" v-on:click='pc_puerta_de_izq' data-estado="0"><i class="fa fa-bolt"></i> Puerta delantera Izq.</button>
-                    <button ref="pc_puerta_de_der" class="btn" v-bind:class="[encendido_pc_puerta_de_der ? 'btn-warning' : 'btn-primary']" v-on:click='pc_puerta_de_der' data-estado="0"><i class="fa fa-bolt"></i> Puerta delantera Der.</button>
-                    <button ref="pc_puerta_tra_izq" class="btn" v-bind:class="[encendido_pc_puerta_tra_izq ? 'btn-warning' : 'btn-primary']" v-on:click='pc_puerta_tra_izq' data-estado="0"><i class="fa fa-bolt"></i> Puerta tracera Izq.</button>
-                    <button ref="pc_puerta_tra_der" class="btn" v-bind:class="[encendido_pc_puerta_tra_der ? 'btn-warning' : 'btn-primary']" v-on:click='pc_puerta_tra_der' data-estado="0"><i class="fa fa-bolt"></i> Puerta tracera Der.</button>
+                    <button ref="pc_puerta_de_izq" class="btn" v-bind:class="[encendido_pc_puerta_de_izq ? 'btn-warning' : 'btn-primary']" v-on:click='pc_puerta_de_izq' data-estado="1"><i class="fa fa-bolt"></i> Puerta delantera Izq.</button>
+                    <button ref="pc_puerta_de_der" class="btn" v-bind:class="[encendido_pc_puerta_de_der ? 'btn-warning' : 'btn-primary']" v-on:click='pc_puerta_de_der' data-estado="1"><i class="fa fa-bolt"></i> Puerta delantera Der.</button>
+                    <button ref="pc_puerta_tra_izq" class="btn" v-bind:class="[encendido_pc_puerta_tra_izq ? 'btn-warning' : 'btn-primary']" v-on:click='pc_puerta_tra_izq' data-estado="1"><i class="fa fa-bolt"></i> Puerta tracera Izq.</button>
+                    <button ref="pc_puerta_tra_der" class="btn" v-bind:class="[encendido_pc_puerta_tra_der ? 'btn-warning' : 'btn-primary']" v-on:click='pc_puerta_tra_der' data-estado="1"><i class="fa fa-bolt"></i> Puerta tracera Der.</button>
                 </div>
                 <div class="col-md-4">
 
@@ -69,10 +69,10 @@ export default {
                     if (!error) {
                         console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                         if (valor == '0') {
-                            this.encendido_super_vip = true;
+                            this.encendido_pc_pb = false;
                             button.dataset.estado = '1';
                         } else{
-                            this.encendido_super_vip = false;
+                            this.encendido_pc_pb = true;
                             button.dataset.estado = '0';
                         }
                     } else{
@@ -86,23 +86,16 @@ export default {
             const button = this.$refs.pc_p1
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            if (valor == '0') {
-                this.encendido_pc_p1 = false;
-                
-            } else{
-                this.encendido_pc_p1 = true;
-                
-            }
                 let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.2.86", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_p1 = true;
+                                this.encendido_pc_p1 = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_p1 = false;
+                                this.encendido_pc_p1 = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -123,10 +116,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_p2 = true;
+                                this.encendido_pc_p2 = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_p2 = false;
+                                this.encendido_pc_p2 = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -146,10 +139,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_p3 = true;
+                                this.encendido_pc_p3 = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_p3 = false;
+                                this.encendido_pc_p3 = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -169,10 +162,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_p4 = true;
+                                this.encendido_pc_p4 = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_p4 = false;
+                                this.encendido_pc_p4 = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -192,10 +185,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_p5 = true;
+                                this.encendido_pc_p5 = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_p5 = false;
+                                this.encendido_pc_p5 = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -215,10 +208,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_techo = true;
+                                this.encendido_pc_techo = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_techo = false;
+                                this.encendido_pc_techo = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -238,10 +231,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_mirador = true;
+                                this.encendido_pc_mirador = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_mirador = false;
+                                this.encendido_pc_mirador = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -261,10 +254,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_banos = true;
+                                this.encendido_pc_banos = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_banos = false;
+                                this.encendido_pc_banos = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -284,10 +277,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_ctrl = true;
+                                this.encendido_pc_ctrl = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_ctrl = false;
+                                this.encendido_pc_ctrl = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -307,10 +300,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_puerta_de_izq = true;
+                                this.encendido_pc_puerta_de_izq = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_puerta_de_izq = false;
+                                this.encendido_pc_puerta_de_izq = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -330,10 +323,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_puerta_de_der = true;
+                                this.encendido_pc_puerta_de_der = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_puerta_de_der = false;
+                                this.encendido_pc_puerta_de_der = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -353,10 +346,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_puerta_tra_der = true;
+                                this.encendido_pc_puerta_tra_der = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_puerta_tra_der = false;
+                                this.encendido_pc_puerta_tra_der = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -376,10 +369,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_pc_puerta_tra_izq = true;
+                                this.encendido_pc_puerta_tra_izq = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_pc_puerta_tra_izq = false;
+                                this.encendido_pc_puerta_tra_izq = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
