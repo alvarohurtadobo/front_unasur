@@ -29,13 +29,16 @@
                     <h2 class="encendido">Hall Recibidor</h2>
                 </div>
                 <div>
+                    <button ref="s_hall_puertas" class="btn" v-bind:class="[ encendido_sm_hall_puertas ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_puertas' data-estado="1">Luces Puertas</button>
+                    <button ref="s_hall_led" class="btn" v-bind:class="[ encendido_sm_hall_led ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_led' data-estado="1">Luces Led</button>
                     <button ref="s_hall_ing" class="btn" v-bind:class="[ encendido_sm_hall_ing ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_ing' data-estado="1">Ingreso Sala Multi.</button>
-                    <button ref="s_hall_reci_izq" class="btn" v-bind:class="[ encendido_sm_hall_reci_izq ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_reci_izq' data-estado="1">Recibidor Izq.</button>
-                    <button ref="s_hall_sp" class="btn" v-bind:class="[ encendido_sm_hall_sp ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_sp' data-estado="1">Sala de Prensa</button>
-                    <button ref="s_hall_pk_este" class="btn" v-bind:class="[ encendido_pk_este ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_pk_este' data-estado="1">Parking Este</button>
-                    <button ref="s_hall_pk_oeste" class="btn" v-bind:class="[ encendido_pk_oeste ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_pk_oeste' data-estado="1">Parking Oeste</button>
-                    <button ref="s_hall_pk_ingreso" class="btn" v-bind:class="[ encendido_pk_ingreso ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_pk_ingreso' data-estado="1">Ingreso Parking</button>
                     <button ref="s_hall_scr" class="btn" v-bind:class="[ encendido_s_hall_scr ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_scr' data-estado="1">Sala Control Recib</button>
+                    <button ref="s_hall_reci_norte" class="btn" v-bind:class="[ encendido_sm_hall_reci_norte ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_reci_norte' data-estado="1">Recibidor Norte</button>
+                    <button ref="s_hall_reci_sud" class="btn" v-bind:class="[ encendido_sm_hall_reci_sud ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_reci_sud' data-estado="1">Recibidor Sud</button>
+                    <button ref="s_hall_sp" class="btn" v-bind:class="[ encendido_sm_hall_sp ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_sp' data-estado="1">Sala de Prensa</button>
+                    <button ref="s_hall_pk_norte" class="btn" v-bind:class="[ encendido_pk_norte ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_pk_norte' data-estado="1">Parking Norte</button>
+                    <button ref="s_hall_pk_sud" class="btn" v-bind:class="[ encendido_pk_sud ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_pk_sud' data-estado="1">Parking Sud</button>
+                    <button ref="s_hall_pk_ingreso" class="btn" v-bind:class="[ encendido_pk_ingreso ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_pk_ingreso' data-estado="1">Ingreso Parking</button>
                     <button ref="s_hall_ofp" class="btn" v-bind:class="[ encendido_s_hall_ofp ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_ofp' data-estado="1">Oficina Prensa</button>
                 </div>
             </div>
@@ -147,10 +150,13 @@ export default {
         encendido_sm_calle_norte: Boolean,
         encendido_sm_calle_sud: Boolean,
         encendido_sm_hall_ing: Boolean,
-        encendido_sm_hall_reci_izq: Boolean,
+        encendido_sm_hall_puertas: Boolean,
+        encendido_sm_hall_led: Boolean,
+        encendido_sm_hall_reci_norte: Boolean,
+        encendido_sm_hall_reci_sud: Boolean,
         encendido_sm_hall_sp: Boolean,
-        encendido_pk_este: Boolean,
-        encendido_pk_oeste: Boolean,
+        encendido_pk_sud: Boolean,
+        encendido_pk_norte: Boolean,
         encendido_pk_ingreso: Boolean,
         encendido_s_hall_scr: Boolean,
         encendido_s_hall_ofp: Boolean,
@@ -333,13 +339,56 @@ export default {
                     }
                 });
         },
-        // Iluminacion HALL  Falta 0/0/7 - 0/0/8 - 0/0/10
+        s_hall_puertas() {
+            const button = this.$refs.s_hall_puertas;
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+            let grupos = new Array();
+            grupos = ['0/2/5'];
+            console.log('Sala Multiple');
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
+                (error, result) => {
+                    if (!error) {
+                        console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                        if (valor == '0') {
+                            this.encendido_sm_hall_puertas = false;
+                            button.dataset.estado = '1';
+                        } else{
+                            this.encendido_sm_hall_puertas = true;
+                            button.dataset.estado = '0';
+                        }
+                    }
+                });
+        },
+        s_hall_led() {
+            const button = this.$refs.s_hall_led;
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+            let grupos = new Array();
+            grupos = ['0/0/1'];
+            console.log('Sala Multiple');
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
+                (error, result) => {
+                    if (!error) {
+                        console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                        if (valor == '0') {
+                            this.encendido_sm_hall_led = false;
+                            button.dataset.estado = '1';
+                        } else{
+                            this.encendido_sm_hall_led = true;
+                            button.dataset.estado = '0';
+                        }
+                    }
+                });
+        },
         s_hall_ing() {
             const button = this.$refs.s_hall_ing;
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
             let grupos = new Array();
-            grupos = ['0/0/1','0/0/3', '0/2/4', '0/2/5', '2/0/9', '2/0/8'];
+            grupos = ['0/0/3', '0/2/4'];
             console.log('Sala Multiple');
             HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
@@ -356,12 +405,34 @@ export default {
                     }
                 });
         },
-        s_hall_reci_izq(){
-            const button = this.$refs.s_hall_reci_izq;
+        s_hall_reci_norte() {
+            const button = this.$refs.s_hall_reci_norte;
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
             let grupos = new Array();
-            grupos = ['0/0/1','0/0/3', '0/2/4', '0/2/5'];
+            grupos = ['0/0/3'];
+            console.log('Sala Multiple');
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
+                (error, result) => {
+                    if (!error) {
+                        console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                        if (valor == '0') {
+                            this.encendido_sm_hall_reci_norte = false;
+                            button.dataset.estado = '1';
+                        } else{
+                            this.encendido_sm_hall_reci_norte = true;
+                            button.dataset.estado = '0';
+                        }
+                    }
+                });
+        },
+        s_hall_reci_sud(){
+            const button = this.$refs.s_hall_reci_sud;
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+            let grupos = new Array();
+            grupos = ['0/2/4'];
             console.log('Hall Recibidor Izquierdo');
             HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
@@ -369,10 +440,10 @@ export default {
                     if (!error) {
                         console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                         if (valor == '0') {
-                            this.encendido_sm_hall_reci_izq = false;
+                            this.encendido_sm_hall_reci_sud = false;
                             button.dataset.estado = '1';
                         } else{
-                            this.encendido_sm_hall_reci_izq = true;
+                            this.encendido_sm_hall_reci_sud = true;
                             button.dataset.estado = '0';
                         }
                     } else{
@@ -403,8 +474,8 @@ export default {
                     }
                 });
         },
-        s_hall_pk_este() {
-            const button = this.$refs.s_hall_pk_este;
+        s_hall_pk_sud() {
+            const button = this.$refs.s_hall_pk_sud;
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
             let grupos = new Array();
@@ -416,18 +487,18 @@ export default {
                     if (!error) {
                         console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                         if (valor == 0) {
-                            this.encendido_pk_este = false;
+                            this.encendido_pk_sud = false;
                             button.dataset.estado = 1;
                         } else{
-                            this.encendido_pk_este = true;
+                            this.encendido_pk_sud = true;
                             button.dataset.estado = 0;
                         }
                     }
                 });
         },
         //  Falta 2/0/0 - 2/0/1 - 2/0/2
-        s_hall_pk_oeste() {
-            const button = this.$refs.s_hall_pk_oeste;
+        s_hall_pk_norte() {
+            const button = this.$refs.s_hall_pk_norte;
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
             let grupos = new Array();
@@ -439,10 +510,10 @@ export default {
                     if (!error) {
                         console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                         if (valor == 0) {
-                            this.encendido_pk_oeste = false;
+                            this.encendido_pk_norte = false;
                             button.dataset.estado = 1;
                         } else{
-                            this.encendido_pk_oeste = true;
+                            this.encendido_pk_norte = true;
                             button.dataset.estado = 0;
                         }
                     }
@@ -453,7 +524,7 @@ export default {
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
             let grupos = new Array();
-            grupos = ['0/0/7', '0/0/8','0/0/10','2/0/0','2/0/1', '2/0/2'];
+            grupos = ['2/0/0','2/0/1', '2/0/2'];
             console.log('Ingreso Parqueo');
             HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },

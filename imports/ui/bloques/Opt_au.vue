@@ -13,7 +13,9 @@
                     <button ref="au_p1" class="btn" v-bind:class="[encendido_au_p1 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p1' data-estado="1"><i class="fa fa-bolt"></i> Iluminación P1</button>
                     <button ref="au_p2" class="btn" v-bind:class="[encendido_au_p2 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p2' data-estado="1"><i class="fa fa-bolt"></i> Iluminación P2</button>
                     <button ref="au_p4" class="btn" v-bind:class="[encendido_au_p4 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p4' data-estado="1"><i class="fa fa-bolt"></i> Iluminación P4</button>
-                    <button ref="au_pas_norte" class="btn" v-bind:class="[encendido_au_pas_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_pas_norte' data-estado="1"><i class="fa fa-bolt"></i> Pasillo Norte</button>
+                    <button ref="au_ext_norte" class="btn" v-bind:class="[encendido_au_ext_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_ext_norte' data-estado="1"><i class="fa fa-bolt"></i> Luz Ext. Norte</button>
+                    <button ref="au_prin_ingr_pas_norte" class="btn" v-bind:class="[encendido_au_prin_ingr_pas_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_ingr_pas_norte' data-estado="1"><i class="fa fa-bolt"></i> Ingreso Pasillo Norte</button>
+                    <button ref="au_pasillo_norte" class="btn" v-bind:class="[encendido_au_pasillo_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_pasillo_norte' data-estado="1"><i class="fa fa-bolt"></i> Luz Pas. interior Norte</button>
                     <button ref="au_clispas_ramp_sud" class="btn" v-bind:class="[encendido_au_clispas_ramp_sud ? 'btn-warning' : 'btn-primary']" v-on:click='au_clispas_ramp_sud' data-estado="1"><i class="fa fa-bolt"></i> Chispas Rampa Sud</button>
                     <button ref="au_pasillo_gradas" class="btn" v-bind:class="[encendido_au_pasillo_gradas ? 'btn-warning' : 'btn-primary']" v-on:click='au_pasillo_gradas' data-estado="1"><i class="fa fa-bolt"></i> Pasillo gradas</button>
                     <button ref="au_cafeteria" class="btn" v-bind:class="[encendido_au_cafeteria ? 'btn-warning' : 'btn-primary']" v-on:click='au_cafeteria' data-estado="1"><i class="fa fa-bolt"></i> Cafetería</button>
@@ -49,9 +51,10 @@
                         <button ref="au_prin_escenario" class="btn" v-bind:class="[encendido_au_prin_escenario ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_escenario' data-estado="1"><i class="fa fa-bolt"></i> Escenario</button>
                         <button ref="au_prin_esc_diserta" class="btn" v-bind:class="[encendido_au_prin_esc_diserta ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_diserta' data-estado="1"><i class="fa fa-bolt"></i> Modo Disertación</button>
                         <button ref="au_prin_esc_limpieza" class="btn" v-bind:class="[encendido_au_prin_esc_limpieza ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_limpieza' data-estado="1"><i class="fa fa-bolt"></i> Modo Limpieza</button>
-                        <button ref="au_prin_esc_gradas" class="btn" v-bind:class="[encendido_au_prin_esc_gradas ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_gradas' data-estado="1"><i class="fa fa-bolt"></i> Modo Gradas</button>
                         <button ref="au_prin_esc_coro" class="btn" v-bind:class="[encendido_au_prin_esc_coro ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_coro' data-estado="1"><i class="fa fa-bolt"></i> Modo Coro</button>
                         <button ref="au_prin_esc_tenue" class="btn" v-bind:class="[encendido_au_prin_esc_tenue ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_tenue' data-estado="1"><i class="fa fa-bolt"></i> Modo Tenue</button>
+                        <button ref="au_prin_esc_pasi_norte" class="btn" v-bind:class="[encendido_au_prin_esc_pasi_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_pasi_norte' data-estado="1"><i class="fa fa-bolt"></i> Aud. Pasillo Norte</button>
+                        <button ref="au_prin_esc_pasi_sud" class="btn" v-bind:class="[encendido_au_prin_esc_pasi_sud ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_esc_pasi_sud' data-estado="1"><i class="fa fa-bolt"></i> Aud. Pasillo Sud</button>
                     
                     </div>
                     <div class="col-md-6">
@@ -67,8 +70,14 @@
                     <h2 class="encendido">Auditorio A</h2>
                 </div>
                 <div>
-                    <button ref="au_a_butacas" class="btn" v-bind:class="[encendido_au_a_butacas ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_butacas' data-estado="1"><i class="fa fa-bolt"></i> Butacas Aud. A</button>
-                    <button ref="au_a_escenario" class="btn" v-bind:class="[encendido_au_a_escenario ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_escenario' data-estado="1"><i class="fa fa-bolt"></i> Escenario Aud. A</button>
+                    <button ref="au_a_butacas_total" class="btn" v-bind:class="[encendido_au_a_butacas_total ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_butacas_total' data-estado="1"><i class="fa fa-bolt"></i> Butacas Total</button>
+                    <button ref="au_a_butacas_tenue" class="btn" v-bind:class="[encendido_au_a_butacas_tenue ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_butacas_tenue' data-estado="1"><i class="fa fa-bolt"></i> Butacas Tenue</button>
+                    <button ref="au_a_butacas_parcial" class="btn" v-bind:class="[encendido_au_a_butacas_parcial ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_butacas_parcial' data-estado="1"><i class="fa fa-bolt"></i> Butacas Parcial</button>
+                    <button ref="au_a_butacas_estrella" class="btn" v-bind:class="[encendido_au_a_butacas_estrella ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_butacas_estrella' data-estado="1"><i class="fa fa-bolt"></i> Butacas Estrella</button>
+                    <button ref="au_a_butacas_ojos_gato" class="btn" v-bind:class="[encendido_au_a_butacas_ojos_gato ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_butacas_ojos_gato' data-estado="1"><i class="fa fa-bolt"></i> Butacas Ojos de gato</button>
+                    <button ref="au_a_escenario_a" class="btn" v-bind:class="[encendido_au_a_escenario_a ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_escenario_a' data-estado="1"><i class="fa fa-bolt"></i> Escenario Aud. A modo 1</button>
+                    <button ref="au_a_escenario_b" class="btn" v-bind:class="[encendido_au_a_escenario_b ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_escenario_b' data-estado="1"><i class="fa fa-bolt"></i> Escenario Aud. A modo 2</button>
+                    <button ref="au_a_escenario_c" class="btn" v-bind:class="[encendido_au_a_escenario_c ? 'btn-warning' : 'btn-primary']" v-on:click='au_a_escenario_c' data-estado="1"><i class="fa fa-bolt"></i> Escenario Aud. A modo 3</button>
                 </div>
             </div>
             <div class="col-md-2">
@@ -84,8 +93,14 @@
                     <h2 class="encendido">Auditorio B</h2>
                 </div>
                 <div>
-                    <button ref="au_b_butacas" class="btn" v-bind:class="[encendido_au_b_butacas ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_butacas' data-estado="1"><i class="fa fa-bolt"></i> Butacas Aud. B</button>
-                    <button ref="au_b_escenario" class="btn" v-bind:class="[encendido_au_b_escenario ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_escenario' data-estado="1"><i class="fa fa-bolt"></i> Escenario Aud. B</button>
+                    <button ref="au_b_butacas" class="btn" v-bind:class="[encendido_au_b_butacas ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_butacas' data-estado="1"><i class="fa fa-bolt"></i> Butacas Total </button>
+                    <button ref="au_b_butacas_tenue" class="btn" v-bind:class="[encendido_au_b_butacas_tenue ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_butacas_tenue' data-estado="1"><i class="fa fa-bolt"></i> Butacas tenue</button>
+                    <button ref="au_b_butacas_ojos_gato" class="btn" v-bind:class="[encendido_au_b_butacas_ojos_gato ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_butacas_ojos_gato' data-estado="1"><i class="fa fa-bolt"></i> Butacas Ojos de gato</button>
+                    <button ref="au_b_butacas_rombo" class="btn" v-bind:class="[encendido_au_b_butacas_rombo ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_butacas_rombo' data-estado="1"><i class="fa fa-bolt"></i> Butacas Rombo</button>
+                    <button ref="au_b_butacas_parcial" class="btn" v-bind:class="[encendido_au_b_butacas_parcial ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_butacas_parcial' data-estado="1"><i class="fa fa-bolt"></i> Butacas Parcial</button>
+                    <button ref="au_b_escenario_a" class="btn" v-bind:class="[encendido_au_b_escenario_a ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_escenario_a' data-estado="1"><i class="fa fa-bolt"></i> Escenario Aud. B modo 1</button>
+                    <button ref="au_b_escenario_b" class="btn" v-bind:class="[encendido_au_b_escenario_b ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_escenario_b' data-estado="1"><i class="fa fa-bolt"></i> Escenario Aud. B modo 2</button>
+                    <button ref="au_b_escenario_c" class="btn" v-bind:class="[encendido_au_b_escenario_c ? 'btn-warning' : 'btn-primary']" v-on:click='au_b_escenario_c' data-estado="1"><i class="fa fa-bolt"></i> Escenario Aud. B modo 3</button>
                 </div>
             </div>
         </div>
@@ -102,7 +117,9 @@ export default {
             encendido_au_p2: Boolean,
             encendido_au_p4: Boolean,
             encendido_au_pas_prin: Boolean,
-            encendido_au_pas_norte: Boolean,
+            encendido_au_ext_norte: Boolean,
+            encendido_au_prin_ingr_pas_norte: Boolean,
+            encendido_au_pasillo_norte: Boolean,
             encendido_au_clispas_ramp_sud: Boolean,
             encendido_au_puerta_disc_esc: Boolean,
             encendido_au_puerta_1_der: Boolean,
@@ -113,14 +130,21 @@ export default {
             encendido_au_prin_escenario: Boolean,
             encendido_au_prin_blq_posterior: Boolean,
             encendido_au_prin_mezanine: Boolean,
-            encendido_au_a_butacas: Boolean,
-            encendido_au_a_escenario: Boolean,
+            encendido_au_a_butacas_total: Boolean,
+            encendido_au_a_butacas_tenue: Boolean,
+            encendido_au_a_butacas_ojos_gato: Boolean,
+            encendido_au_a_butacas_parcial: Boolean,
+            encendido_au_a_butacas_estrella: Boolean,
+            encendido_au_a_escenario_a: Boolean,
+            encendido_au_a_escenario_b: Boolean,
+            encendido_au_a_escenario_c: Boolean,
             encendido_au_prin_esc_diserta: Boolean,
             encendido_au_prin_esc_limpieza: Boolean,
-            encendido_au_prin_esc_gradas: Boolean,
             encendido_au_prin_esc_coro: Boolean,
             encendido_au_b_butacas: Boolean,
-            encendido_au_b_escenario: Boolean,
+            encendido_au_b_escenario_a: Boolean,
+            encendido_au_b_escenario_b: Boolean,
+            encendido_au_b_escenario_c: Boolean,
             // encendido_au_prin_haz_luz: Boolean,
             encendido_au_ab_pasillo: Boolean,
             encendido_au_prin_pas_traduc: Boolean,
@@ -134,6 +158,12 @@ export default {
             encendido_au_puerta_ofi_escalera: Boolean,
             encendido_au_recib_ofis: Boolean,
             encendido_au_prin_esc_tenue: Boolean,
+            encendido_au_b_butacas_ojos_gato: Boolean,
+            encendido_au_b_butacas_tenue: Boolean,
+            encendido_au_b_butacas_rombo: Boolean,
+            encendido_au_b_butacas_parcial: Boolean,
+            encendido_au_prin_esc_pasi_norte: Boolean,
+            encendido_au_prin_esc_pasi_sud: Boolean,
     },
     methods: {  
         au_ing() {
@@ -322,10 +352,10 @@ export default {
                         }
                 });
         },
-        au_pas_norte() {
+        au_ext_norte() {
             let bloque_1 = new Array();
             bloque_1 = ['5/1/3'];
-            const button = this.$refs.au_pas_norte
+            const button = this.$refs.au_ext_norte
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
                 let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
@@ -334,10 +364,56 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_pas_norte = false;
+                                this.encendido_au_ext_norte = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_pas_norte = true;
+                                this.encendido_au_ext_norte = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_prin_ingr_pas_norte(){
+            let bloque_1 = new Array();
+            bloque_1 = ['5/0/7'];
+            const button = this.$refs.au_prin_ingr_pas_norte
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_prin_ingr_pas_norte = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_prin_ingr_pas_norte = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_pasillo_norte() {
+            let bloque_1 = new Array();
+            bloque_1 = ['2/0/15'];
+            const button = this.$refs.au_pasillo_norte
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_pasillo_norte = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_pasillo_norte = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -598,10 +674,10 @@ export default {
                         }
                 });
         },
-        au_a_butacas() {
+        au_a_butacas_total() {
             let bloque_1 = new Array();
             bloque_1 = ['5/0/0'];
-            const button = this.$refs.au_a_butacas
+            const button = this.$refs.au_a_butacas_total
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
                 let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
@@ -610,10 +686,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_a_butacas = false;
+                                this.encendido_au_a_butacas_total = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_a_butacas = true;
+                                this.encendido_au_a_butacas_total = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -621,10 +697,10 @@ export default {
                         }
                 });
         },
-        au_a_escenario() {
+        au_a_butacas_tenue() {
             let bloque_1 = new Array();
-            bloque_1 = ['5/0/1'];
-            const button = this.$refs.au_a_escenario
+            bloque_1 = ['0/0/6'];
+            const button = this.$refs.au_a_butacas_tenue
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
                 let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
@@ -633,10 +709,10 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_a_escenario = false;
+                                this.encendido_au_a_butacas_tenue = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_a_escenario = true;
+                                this.encendido_au_a_butacas_tenue = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -644,6 +720,146 @@ export default {
                         }
                 });
         },
+        au_a_butacas_ojos_gato() {
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/13'];
+            const button = this.$refs.au_a_butacas_ojos_gato
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_a_butacas_ojos_gato = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_a_butacas_ojos_gato = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_a_butacas_parcial() {
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/15'];
+            const button = this.$refs.au_a_butacas_parcial
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_a_butacas_parcial = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_a_butacas_parcial = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_a_butacas_estrella() {
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/4'];
+            const button = this.$refs.au_a_butacas_estrella
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_a_butacas_estrella = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_a_butacas_estrella = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_a_escenario_a() {
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/5'];
+            const button = this.$refs.au_a_escenario_a
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_a_escenario_a = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_a_escenario_a = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_a_escenario_b() {
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/7'];
+            const button = this.$refs.au_a_escenario_b
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_a_escenario_b = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_a_escenario_b = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_a_escenario_c() {
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/14'];
+            const button = this.$refs.au_a_escenario_c
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_a_escenario_c = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_a_escenario_c = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+
+
         au_b_butacas() {
             let bloque_1 = new Array();
             bloque_1 = ['5/0/2'];
@@ -667,10 +883,10 @@ export default {
                         }
                 });
         },
-        au_b_escenario() {
+        au_b_butacas_tenue(){
             let bloque_1 = new Array();
-            bloque_1 = ['5/0/3'];
-            const button = this.$refs.au_b_escenario
+            bloque_1 = ['0/1/4'];
+            const button = this.$refs.au_b_butacas_tenue
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
                 let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
@@ -679,10 +895,148 @@ export default {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_b_escenario = false;
+                                this.encendido_au_b_butacas_tenue = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_b_escenario = true;
+                                this.encendido_au_b_butacas_tenue = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_b_butacas_ojos_gato(){
+            let bloque_1 = new Array();
+            bloque_1 = ['0/1/6'];
+            const button = this.$refs.au_b_butacas_ojos_gato
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_b_butacas_ojos_gato = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_b_butacas_ojos_gato = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_b_butacas_parcial(){
+            let bloque_1 = new Array();
+            bloque_1 = ['0/1/5'];
+            const button = this.$refs.au_b_butacas_parcial
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_b_butacas_parcial = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_b_butacas_parcial = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_b_butacas_rombo(){
+            let bloque_1 = new Array();
+            bloque_1 = ['0/1/12'];
+            const button = this.$refs.au_b_butacas_rombo
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_b_butacas_rombo = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_b_butacas_rombo = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_b_escenario_a() {
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/1'];
+            const button = this.$refs.au_b_escenario_a
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_b_escenario_a = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_b_escenario_a = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_b_escenario_b() {
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/2'];
+            const button = this.$refs.au_b_escenario_b
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_b_escenario_b = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_b_escenario_b = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_b_escenario_c() {
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/3'];
+            const button = this.$refs.au_b_escenario_c
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_b_escenario_c = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_b_escenario_c = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -943,29 +1297,7 @@ export default {
                         }
                 });
         },
-        au_prin_esc_gradas() {
-            let bloque_1 = new Array();
-            bloque_1 = ['3/1/4', '3/1/5'];
-            const button = this.$refs.au_prin_esc_gradas
-            let valor = button.dataset.estado;
-            console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
-                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
-                    (error, result) => {
-                        if (!error) {
-                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
-                            if (valor == '0') {
-                                this.encendido_au_prin_esc_gradas = false;
-                                button.dataset.estado = '1';
-                            } else{
-                                this.encendido_au_prin_esc_gradas = true;
-                                button.dataset.estado = '0';
-                            }
-                        } else{
-                            console.log(error);
-                        }
-                });
-        },
+        
         au_prin_esc_diserta() {
             let bloque_1 = new Array();
             bloque_1 = ['3/0/15', '3/1/0'];
@@ -1014,7 +1346,8 @@ export default {
         },
         au_prin_esc_tenue() {
             let bloque_1 = new Array();
-            bloque_1 = ['3/1/1', '3/1/4', '3/1/5'];
+            bloque_1 = ['3/1/4', '3/1/5'];
+            // bloque_1 = ['5/3/19'];
             const button = this.$refs.au_prin_esc_tenue
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
@@ -1028,6 +1361,52 @@ export default {
                                 button.dataset.estado = '1';
                             } else{
                                 this.encendido_au_prin_esc_tenue = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_prin_esc_pasi_norte() {
+            let bloque_1 = new Array();
+            bloque_1 = ['3/0/0'];
+            const button = this.$refs.au_prin_esc_pasi_norte
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_prin_esc_pasi_norte = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_prin_esc_pasi_norte = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_prin_esc_pasi_sud() {
+            let bloque_1 = new Array();
+            bloque_1 = ['3/0/12'];
+            const button = this.$refs.au_prin_esc_pasi_sud
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_prin_esc_pasi_sud = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_prin_esc_pasi_sud = true;
                                 button.dataset.estado = '0';
                             }
                         } else{

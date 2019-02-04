@@ -251,7 +251,6 @@ export default {
             });
         },
         dimm_2_down() {
-            let bloque_1 = new Array();
             const button = this.$refs.dimm_2_down
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
@@ -278,8 +277,6 @@ export default {
             });
         },
         dimm_2_up() {
-            let bloque_1 = new Array();
-            bloque_1 = ['2/3/0','2/3/1'];
             const button = this.$refs.dimm_2_up
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);

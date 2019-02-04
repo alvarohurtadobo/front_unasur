@@ -14,7 +14,7 @@
                 <button ref="pc_p4" class="btn" v-bind:class="[encendido_pc_p4 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p4' data-estado="1"><i class="fa fa-bolt"></i> Cuarto piso</button>
                 <button ref="pc_p5" class="btn" v-bind:class="[encendido_pc_p5 ? 'btn-warning' : 'btn-primary']" v-on:click='pc_p5' data-estado="1"><i class="fa fa-bolt"></i> Quinto piso</button>
                 <button ref="pc_techo" class="btn" v-bind:class="[encendido_pc_techo ? 'btn-warning' : 'btn-primary']" v-on:click='pc_techo' data-estado="1"><i class="fa fa-bolt"></i> Iluminación techo</button>
-                <button ref="pc_mirado" class="btn" v-bind:class="[encendido_pc_mirador ? 'btn-warning' : 'btn-primary']" v-on:click='pc_mirador' data-estado="1"><i class="fa fa-bolt"></i> Mirador</button>
+                <!-- <button ref="pc_mirado" class="btn" v-bind:class="[encendido_pc_mirador ? 'btn-warning' : 'btn-primary']" v-on:click='pc_mirador' data-estado="1"><i class="fa fa-bolt"></i> Mirador</button> -->
                 <button ref="pc_banos" class="btn" v-bind:class="[encendido_pc_banos ? 'btn-warning' : 'btn-primary']" v-on:click='pc_banos' data-estado="1"><i class="fa fa-bolt"></i> Baños</button>
             </div>
             <div class="col-md-4">
@@ -48,7 +48,7 @@ export default {
             encendido_pc_p4: Boolean,
             encendido_pc_p5: Boolean,
             encendido_pc_techo: Boolean,
-            encendido_pc_mirador: Boolean,
+            // encendido_pc_mirador: Boolean,
             encendido_pc_banos: Boolean,
             encendido_pc_ctrl: Boolean,
             encendido_pc_puerta_de_izq: Boolean,
@@ -198,7 +198,7 @@ export default {
         },
         pc_techo() {
             let bloque_1 = new Array();
-            bloque_1 = ['0/1/1'];
+            bloque_1 = ['0/2/0', '0/2/1'];
             const button = this.$refs.pc_techo
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
@@ -219,29 +219,29 @@ export default {
                         }
                 });
         },
-        pc_mirador() {
-            let bloque_1 = new Array();
-            bloque_1 = ['0/2/1'];
-            const button = this.$refs.pc_mirador
-            let valor = button.dataset.estado;
-            console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
-                    { data: { "ip": "192.168.2.86", "group": bloque_1, "order": parseInt(valor)} },
-                    (error, result) => {
-                        if (!error) {
-                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
-                            if (valor == '0') {
-                                this.encendido_pc_mirador = false;
-                                button.dataset.estado = '1';
-                            } else{
-                                this.encendido_pc_mirador = true;
-                                button.dataset.estado = '0';
-                            }
-                        } else{
-                            console.log(error);
-                        }
-                });
-        },
+        // pc_mirador() {
+        //     let bloque_1 = new Array();
+        //     bloque_1 = ['0/2/1'];
+        //     const button = this.$refs.pc_mirador
+        //     let valor = button.dataset.estado;
+        //     console.log("Estado: "+valor);
+        //         let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+        //             { data: { "ip": "192.168.2.86", "group": bloque_1, "order": parseInt(valor)} },
+        //             (error, result) => {
+        //                 if (!error) {
+        //                     console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+        //                     if (valor == '0') {
+        //                         this.encendido_pc_mirador = false;
+        //                         button.dataset.estado = '1';
+        //                     } else{
+        //                         this.encendido_pc_mirador = true;
+        //                         button.dataset.estado = '0';
+        //                     }
+        //                 } else{
+        //                     console.log(error);
+        //                 }
+        //         });
+        // },
         pc_banos() {
             let bloque_1 = new Array();
             bloque_1 = ['0/1/2'];
