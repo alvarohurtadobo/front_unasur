@@ -15,15 +15,14 @@
   </div>
 </template>
 <script>
-import NavBar from "./NavBar.vue";
-import BlqSm from "../imports/ui/bloques/Bloq_sm.vue";
-import BlqPc from "../imports/ui/bloques/Bloq_pc.vue";
-import BlqAu from "../imports/ui/bloques/Bloq_au.vue";
-import BlqVip from "../imports/ui/bloques/Bloq_vip.vue";
+import BlqSm from "../imports/ui/bloques/sala_multiple/Bloq_sm.vue";
+import BlqPc from "../imports/ui/bloques/plaza_comidas/Bloq_pc.vue";
+import BlqAu from "../imports/ui/bloques/auditorio/Bloq_au.vue";
+import BlqVip from "../imports/ui/bloques/sala_vip/Bloq_vip.vue";
 
 export default {
   components:{
-      NavBar,
+      
       BlqSm,
       BlqPc,
       BlqAu,
