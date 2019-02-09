@@ -128,8 +128,9 @@ export default {
             console.log("Estado: "+valor);
             let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/live/',
                     { data: { "ip": "192.168.4.214",
-                                "order":parseInt(valor)} 
-                            },
+                             "order":parseInt(valor)
+                            } 
+                    },
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
