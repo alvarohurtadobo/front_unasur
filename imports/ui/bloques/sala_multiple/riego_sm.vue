@@ -6,102 +6,94 @@
         <div class="col-md-12">
             <div ref="riego_norte_master" class="row bloque_opcion" v-on:click='riego_norte_master' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_master ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_master ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Riego Master A1: [A+D]
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_master ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_master ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
         </div>
             <div class="col-md-12">
                 <div ref="riego_norte_a_2" class="row bloque_opcion" v-on:click='riego_norte_a_2' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_2 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_2 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Riego Norte A2: [B + A]
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_2 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_2 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             </div>
             <div class="col-md-12">
                 <div ref="riego_norte_a_3" class="row bloque_opcion" v-on:click='riego_norte_a_3' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_3 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_3 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Riego Norte A3: [C + A]
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_3 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_3 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             </div>
             <div class="col-md-12">
                 <div ref="riego_norte_a_4" class="row bloque_opcion" v-on:click='riego_norte_a_4' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_4 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_4 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Riego Norte A4: [A + F + A Sist. 1]
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_4 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_4 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             </div>
             <div class="col-md-12">
                 <div ref="riego_norte_a_5" class="row bloque_opcion" v-on:click='riego_norte_a_5' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_5 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_5 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Riego Norte A5: [ D]
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_5 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_5 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             </div>
             <div class="col-md-12">
                 <div ref="riego_norte_a_6" class="row bloque_opcion" v-on:click='riego_norte_a_6' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_6 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_6 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Riego Norte A6
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_6 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_6 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 </div>
             </div>
             <div class="col-md-12">
                 <div ref="riego_norte_a_7" class="row bloque_opcion" v-on:click='riego_norte_a_7' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_7 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_7 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Riego Norte A7
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_riego_norte_a_7 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_riego_norte_a_7 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 </div>
-            </div>
-                        <!-- <button ref="riego_norte_master" class="btn" v-bind:class="[ encendido_riego_norte_master ? 'btn-warning' : 'btn-primary' ]" v-on:click='riego_norte_master' data-estado="1"><i class="fa fa-bolt"></i> Riego Master A1: [A+D]</button>  -->
-                        <!-- <button ref="riego_norte_a_2" class="btn" v-bind:class="[ encendido_riego_norte_a_2 ? 'btn-warning' : 'btn-primary' ]" v-on:click='riego_norte_a_2' data-estado="1"><i class="fa fa-bolt"></i> Riego Norte A2: [B + A]</button>  -->
-                        <!-- <button ref="riego_norte_a_3" class="btn" v-bind:class="[ encendido_riego_norte_a_3 ? 'btn-warning' : 'btn-primary' ]" v-on:click='riego_norte_a_3' data-estado="1"><i class="fa fa-bolt"></i> Riego Norte A3: [C + A]</button>  -->
-                        <!-- <button ref="riego_norte_a_4" class="btn" v-bind:class="[ encendido_riego_norte_a_4 ? 'btn-warning' : 'btn-primary' ]" v-on:click='riego_norte_a_4' data-estado="1"><i class="fa fa-bolt"></i> Riego Norte A4: [A + F + A Sist. 1]</button>  -->
-                        <!-- <button ref="riego_norte_a_5" class="btn" v-bind:class="[ encendido_riego_norte_a_5 ? 'btn-warning' : 'btn-primary' ]" v-on:click='riego_norte_a_5' data-estado="1"><i class="fa fa-bolt"></i> Riego Norte A5: [ D]</button>  -->
-                        <!-- <button ref="riego_norte_a_6" class="btn" v-bind:class="[ encendido_riego_norte_a_6 ? 'btn-warning' : 'btn-primary' ]" v-on:click='riego_norte_a_6' data-estado="1"><i class="fa fa-bolt"></i> Riego Norte A6</button>  -->
-                        <!-- <button ref="riego_norte_a_7" class="btn" v-bind:class="[ encendido_riego_norte_a_7 ? 'btn-warning' : 'btn-primary' ]" v-on:click='riego_norte_a_7' data-estado="1"><i class="fa fa-bolt"></i> Riego Norte A7</button>  -->
-                        
+            </div>                        
     </div>
 </template>
 

@@ -22,6 +22,11 @@ import dimmer_vip from '/imports/ui/bloques/sala_vip/dimmer_vip.vue';
 import rgb_vip from '/imports/ui/bloques/sala_vip/rgb_vip.vue';
 // ************* AUDITORIO *******************
 import au from '/imports/ui/bloques/auditorio/Opt_au.vue';
+import accesos_au from "/imports/ui/bloques/auditorio/Accesos_au.vue";
+import iluminacion_au from '/imports/ui/bloques/auditorio/Ilum_au.vue';
+import iluminacion_au_a from "/imports/ui/bloques/auditorio/Ilum_au_a.vue";
+import iluminacion_au_b from "/imports/ui/bloques/auditorio/Ilum_au_b.vue";
+import iluminacion_au_prin from "/imports/ui/bloques/auditorio/Ilum_au_prin.vue";
 RouterFactory.configure(router => {
     router.addRoutes([
       {
@@ -65,14 +70,14 @@ RouterFactory.configure(router => {
         name: "pc",
         component: pc,
         children: [
-            {
-              path: "/accesos_pc",
-              component: accesos_pc
-            },
-            {
-              path: "/iluminacion_pc",
-              component: iluminacion_pc
-            }
+          {
+            path: "/accesos_pc",
+            component: accesos_pc
+          },
+          {
+            path: "/iluminacion_pc",
+            component: iluminacion_pc
+          }
         ]
       },
       {
@@ -80,24 +85,46 @@ RouterFactory.configure(router => {
         name: "vip",
         component: vip,
         children: [
-            {
-                path: "/iluminacion_vip",
-                component: iluminacion_vip
-            },
-            {
-                path: "/dimmer_vip",
-                component: dimmer_vip
-            },
-            {
-                path: "/rgb_vip",
-                component: rgb_vip
-            }
+          {
+            path: "/iluminacion_vip",
+            component: iluminacion_vip
+          },
+          {
+            path: "/dimmer_vip",
+            component: dimmer_vip
+          },
+          {
+            path: "/rgb_vip",
+            component: rgb_vip
+          }
         ]
       },
       {
         path: "/au",
         name: "au",
-        component: au
+        component: au,
+        children: [
+          {
+            path: "/accesos_au",
+            component: accesos_au
+          },
+          {
+            path: "/iluminacion_au",
+            component: iluminacion_au
+          },
+            {
+                path: "/iluminacion_au_prin",
+                component: iluminacion_au_prin
+            },
+          {
+            path: "/iluminacion_au_a",
+            component: iluminacion_au_a
+          },
+          {
+            path: "/iluminacion_au_b",
+            component: iluminacion_au_b
+          }
+        ]
       },
       {
         path: "*",

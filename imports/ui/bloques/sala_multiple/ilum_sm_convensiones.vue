@@ -6,73 +6,73 @@
         <div class="col-md-12">
             <div ref="bloque_1" class="row bloque_opcion" v-on:click='s_multi_b1' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_b1 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_b1 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Bloque 1
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_b1 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_b1 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="bloque_2" class="row bloque_opcion" v-on:click='s_multi_b2' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_b2 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_b2 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     
                     Bloque 2
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_b2 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_b2 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="bloque_3" class="row bloque_opcion" v-on:click='s_multi_b3' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_b3 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_b3 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     
                     Bloque 3
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_b3 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_b3 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="exterior" class="row bloque_opcion" v-on:click='s_multi_ext' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_ext ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_ext ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     
                     Luces Ramplas
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_ext ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_ext ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="calle_norte" class="row bloque_opcion" v-on:click='s_multi_calle_norte' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_calle_norte ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_calle_norte ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     
                     Luces calle Norte
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_calle_norte ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_calle_norte ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="calle_sud" class="row bloque_opcion" v-on:click='s_multi_calle_sud' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_calle_sud ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_calle_sud ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     
                     Luces calle Sud
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_calle_sud ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_calle_sud ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <!-- <button ref="bloque_1" class="btn" v-bind:class="[ encendido_sm_b1 ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_multi_b1' data-estado="1"><i class="fa fa-bolt"></i> Bloque 1</button> -->

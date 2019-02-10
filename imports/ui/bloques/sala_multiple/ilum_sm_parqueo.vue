@@ -6,40 +6,37 @@
         <div class="col-md-12">
             <div ref="s_hall_pk_norte" class="row bloque_opcion" v-on:click='s_hall_pk_norte' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_pk_norte ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_pk_norte ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Luces Parqueo Norte
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_pk_norte ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_pk_norte ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="s_hall_pk_sud" class="row bloque_opcion" v-on:click='s_hall_pk_sud' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_pk_sud ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_pk_sud ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Luces Parqueo Sud
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_pk_sud ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_pk_sud ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="s_hall_pk_ingreso" class="row bloque_opcion" v-on:click='s_hall_pk_ingreso' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_pk_ingreso ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_pk_ingreso ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Luces ingreso Parqueo
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_pk_ingreso ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_pk_ingreso ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
-            <!-- <button ref="s_hall_pk_norte" class="btn" v-bind:class="[ encendido_pk_norte ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_pk_norte' data-estado="1">Parking Norte</button> -->
-            <!-- <button ref="s_hall_pk_sud" class="btn" v-bind:class="[ encendido_pk_sud ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_pk_sud' data-estado="1">Parking Sud</button> -->
-            <!-- <button ref="s_hall_pk_ingreso" class="btn" v-bind:class="[ encendido_pk_ingreso ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_pk_ingreso' data-estado="1">Ingreso Parking</button> -->
         </div>
     </div>
 </template>

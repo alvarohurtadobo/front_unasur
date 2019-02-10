@@ -5,7 +5,7 @@
                 <div class="text-center titulo">
                     <span>Plaza de comidas</span>
                 </div>
-                <div class="col-md-12">
+                
                     <router-link to="accesos_pc" class="text-decoration-none">
                         <div class="row">
                             <div class="col-md-9 accion">
@@ -16,9 +16,6 @@
                             </div>
                         </div>
                     </router-link>
-
-                </div>
-                <div class="col-md-12">
                     <router-link to="iluminacion_pc" class="text-decoration-none">
                         <div class="row">
                             <div class="col-md-9 accion">
@@ -29,7 +26,7 @@
                             </div>
                         </div>
                     </router-link>
-                </div>
+                
             </div>
             <router-view></router-view>
         </div>

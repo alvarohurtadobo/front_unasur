@@ -6,67 +6,82 @@
         <div class="col-md-12">
             <div ref="super_vip" class="row bloque_opcion" v-on:click='super_vip' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_super_vip ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_super_vip ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Super VIP
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_super_vip ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_super_vip ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="s_reuniones" class="row bloque_opcion" v-on:click='s_reuniones' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_s_reuniones ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_s_reuniones ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Sala de reuniones
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_s_reuniones ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_s_reuniones ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="c_reuniones" class="row bloque_opcion" v-on:click='c_reuniones' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_c_reuniones ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_c_reuniones ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Centro Sala de reuniones
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_c_reuniones ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_c_reuniones ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+            </div>
+            <div ref="reuniones_pared" class="row bloque_opcion" v-on:click='reuniones_pared' data-estado="1">
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_reuniones_pared ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+                <div class="col-md-8 opcion">
+                    Sala de reuniones Pared
+                </div>
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_reuniones_pared ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+            </div>
+            <div ref="vip_cuadrados" class="row bloque_opcion" v-on:click='vip_cuadrados' data-estado="1">
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_vip_cuadrados ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+                <div class="col-md-8 opcion">
+                    Cuadrados
+                </div>
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_vip_cuadrados ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="ing_vip" class="row bloque_opcion" v-on:click='ing_vip' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_ing_vip ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_ing_vip ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Ingreso VIP
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_ing_vip ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_ing_vip ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="s_descanso" class="row bloque_opcion" v-on:click='s_descanso' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_s_descanso ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_s_descanso ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Sala de descanso
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_s_descanso ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_s_descanso ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
         </div>
-
-
-        <!-- <button ref="super_vip" class="btn" v-bind:class="[encendido_super_vip ? 'btn-warning' : 'btn-primary']" v-on:click='super_vip' data-estado="1"><i class="fa fa-bolt"></i> Super VIP</button> -->
-        <!-- <button ref="s_reuniones" class="btn" v-bind:class="[encendido_s_reuniones ? 'btn-warning' : 'btn-primary']" v-on:click='s_reuniones' data-estado="1"><i class="fa fa-bolt"></i> Sala de reuniones</button> -->
-        <!-- <button ref="c_reuniones" class="btn" v-bind:class="[encendido_c_reuniones ? 'btn-warning' : 'btn-primary']" v-on:click='c_reuniones' data-estado="1"><i class="fa fa-bolt"></i> Centro de reunion</button> -->
-        <!-- <button ref="ing_vip" class="btn" v-bind:class="[encendido_ing_vip ? 'btn-warning' : 'btn-primary']" v-on:click='ing_vip' data-estado="1"><i class="fa fa-bolt"></i> Ingreso VIP</button> -->
-        <!-- <button ref="s_descanso" class="btn" v-bind:class="[encendido_s_descanso ? 'btn-warning' : 'btn-primary']" v-on:click='s_descanso' data-estado="1"><i class="fa fa-bolt"></i> Sala de descanso</button> -->
     </div>
 </template>
 
@@ -78,6 +93,8 @@ export default {
         encendido_c_reuniones: Boolean,
         encendido_ing_vip: Boolean,
         encendido_s_descanso: Boolean,
+        encendido_reuniones_pared: Boolean,
+        encendido_vip_cuadrados: Boolean
     },
     methods:{
         super_vip() {
@@ -142,6 +159,52 @@ export default {
                                 button.dataset.estado = '1';
                             } else{
                                 this.encendido_c_reuniones = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        reuniones_pared() {
+            let bloque_1 = new Array();
+            bloque_1 = ["0/0/11"];
+            const button = this.$refs.reuniones_pared
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_reuniones_pared = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_reuniones_pared = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        vip_cuadrados() {
+            let bloque_1 = new Array();
+            bloque_1 = ["0/0/10"];
+            const button = this.$refs.vip_cuadrados
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_vip_cuadrados = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_vip_cuadrados = true;
                                 button.dataset.estado = '0';
                             }
                         } else{

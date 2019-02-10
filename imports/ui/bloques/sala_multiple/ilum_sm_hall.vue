@@ -6,90 +6,90 @@
         <div class="col-md-12">
             <div ref="s_hall_puertas" class="row bloque_opcion" v-on:click='s_hall_puertas' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_puertas ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_puertas ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Luces Puertas
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_puertas ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_puertas ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="s_hall_led" class="row bloque_opcion" v-on:click='s_hall_led' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_led ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_led ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Luz Led
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_led ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_led ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="s_hall_ing" class="row bloque_opcion" v-on:click='s_hall_ing' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_ing ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_ing ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Hall recibidor Sala Multi.
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_ing ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_ing ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="s_hall_scr" class="row bloque_opcion" v-on:click='s_hall_scr' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_s_hall_scr ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_s_hall_scr ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Sala Control Recib
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_s_hall_scr ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_s_hall_scr ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="s_hall_reci_norte" class="row bloque_opcion" v-on:click='s_hall_reci_norte' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_reci_norte ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_reci_norte ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Recibidor Norte
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_reci_norte ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_reci_norte ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="s_hall_reci_sud" class="row bloque_opcion" v-on:click='s_hall_reci_sud' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_reci_sud ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_reci_sud ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Recibidor Sud
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_reci_sud ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_reci_sud ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="s_hall_sp" class="row bloque_opcion" v-on:click='s_hall_sp' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_sp ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_sp ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Sala de Prensa
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_sm_hall_sp ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_sm_hall_sp ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="s_hall_ofp" class="row bloque_opcion" v-on:click='s_hall_ofp' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_s_hall_ofp ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_s_hall_ofp ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Oficina Prensa
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_s_hall_ofp ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_s_hall_ofp ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <!-- <button ref="s_hall_puertas" class="btn" v-bind:class="[ encendido_sm_hall_puertas ? 'btn-warning' : 'btn-primary' ]" v-on:click='s_hall_puertas' data-estado="1">Luces Puertas</button> -->
