@@ -11,7 +11,7 @@
                         <div class="col-md-9 accion">
                             Accesos Auditorio
                         </div>
-                        <div class="col-md-3 accion">
+                        <div class="col-md-3 accion text-center">
                             <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Acceso2.png': '/images/layout/Acceso2.png']" alt="">
                         </div>
                     </div>
@@ -21,7 +21,7 @@
                         <div class="col-md-9 accion">
                             Iluminación Auditorio
                         </div>
-                        <div class="col-md-3 accion">
+                        <div class="col-md-3 accion text-center">
                             <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
                         </div>
                     </div>
@@ -29,9 +29,9 @@
                 <router-link to="iluminacion_au_prin" class="text-decoration-none">
                     <div class="row">
                         <div class="col-md-9 accion">
-                            Iluminación Auditorio Principal
+                            Iluminación Audit. Principal
                         </div>
-                        <div class="col-md-3 accion">
+                        <div class="col-md-3 accion text-center">
                             <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
                         </div>
                     </div>
@@ -42,7 +42,17 @@
                         <div class="col-md-9 accion">
                             Iluminación Auditorio A
                         </div>
-                        <div class="col-md-3 accion">
+                        <div class="col-md-3 accion text-center">
+                            <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
+                        </div>
+                    </div>
+                </router-link>
+                <router-link to="dimmer_auditorios" class="text-decoration-none">
+                    <div class="row">
+                        <div class="col-md-9 accion">
+                            Dimmer Auditorios
+                        </div>
+                        <div class="col-md-3 accion text-center">
                             <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
                         </div>
                     </div>
@@ -52,7 +62,7 @@
                         <div class="col-md-9 accion">
                             Iluminación Auditorio B
                         </div>
-                        <div class="col-md-3 accion">
+                        <div class="col-md-3 accion text-center">
                             <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
                         </div>
                     </div>
@@ -62,7 +72,7 @@
                         <div class="col-md-9 accion">
                             Aire Auditorios
                         </div>
-                        <div class="col-md-3 accion">
+                        <div class="col-md-3 accion text-center">
                             <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Clima.png': '/images/layout/Clima.png']" alt="">
                         </div>
                     </div>
@@ -97,6 +107,6 @@ a hover{
     background-color: rgba(54, 70, 136, 0.6);
 }
 img{
-    width: 50%;
+    width: 36%;
 }
 </style>

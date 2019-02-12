@@ -1,7 +1,7 @@
 <template>
     <div class="col-md-6">
         <div class="text-center subtitulo">
-            <span class="text-center">Iluminación Auditorio Principal</span>
+            <span class="text-center">Iluminación Auditorio A</span>
         </div>
         <div class="col-md-12">
             <div ref="au_a_butacas_total" class="row bloque_opcion" v-on:click='au_a_butacas_total' data-estado="1">
@@ -137,7 +137,7 @@ export default {
             const button = this.$refs.au_a_butacas_total
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -160,7 +160,7 @@ export default {
             const button = this.$refs.au_a_butacas_tenue
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -183,7 +183,7 @@ export default {
             const button = this.$refs.au_a_butacas_ojos_gato
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -206,7 +206,7 @@ export default {
             const button = this.$refs.au_a_butacas_parcial
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -229,7 +229,7 @@ export default {
             const button = this.$refs.au_a_butacas_estrella
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -252,7 +252,7 @@ export default {
             const button = this.$refs.au_a_escenario_a
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -275,7 +275,7 @@ export default {
             const button = this.$refs.au_a_escenario_b
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -298,7 +298,7 @@ export default {
             const button = this.$refs.au_a_escenario_c
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {

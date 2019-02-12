@@ -11,8 +11,8 @@
                             <div class="col-md-9 accion">
                                 Accesos Pk/Ascensores
                             </div>
-                            <div class="col-md-3 accion">
-                                        <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Acceso2.png': '/images/layout/Acceso2.png']" alt="">
+                            <div class="col-md-3 accion text-center">
+                                <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Acceso2.png': '/images/layout/Acceso2.png']" alt="">
                             </div>
                         </div>
                     </router-link>
@@ -21,7 +21,7 @@
                             <div class="col-md-9 accion">
                                 Iluminación convensiones
                             </div>
-                            <div class="col-md-3 accion">
+                            <div class="col-md-3 accion text-center">
                                 <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                             <div class="col-md-9 accion">
                                 Iluminación Hall
                             </div>
-                            <div class="col-md-3 accion">
+                            <div class="col-md-3 accion text-center">
                                 <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                             <div class="col-md-9 accion">
                                 Iluminación Parqueo
                             </div>
-                            <div class="col-md-3 accion">
+                            <div class="col-md-3 accion text-center">
                                 <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                             <div class="col-md-9 accion">
                                 Indicadores energia
                             </div>
-                            <div class="col-md-3 accion">
+                            <div class="col-md-3 accion text-center">
                                 <img v-bind:src="[encendido_acceso_1 ? '/images/layout/MedidorEnergia2.png': '/images/layout/MedidorEnergia2.png']" alt="">
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                             <div class="col-md-9 accion">
                                 Sistema de Riego
                             </div>
-                            <div class="col-md-3 accion">
+                            <div class="col-md-3 accion text-center">
                                 <img v-bind:src="[encendido_acceso_1 ? '/images/layout/MedidorEnergia2.png': '/images/layout/MedidorEnergia2.png']" alt="">
                             </div>
                         </div>
@@ -83,5 +83,8 @@
 .accesos{
     font-size: 2.5rem;
     /* color: #ffc107; */
+}
+img{
+    width: 36%;
 }
 </style>

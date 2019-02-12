@@ -124,7 +124,7 @@ export default {
             let grupos = new Array();
             grupos = ['0/2/5'];
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+            HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -146,7 +146,7 @@ export default {
             let grupos = new Array();
             grupos = ['0/0/1'];
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+            HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -168,7 +168,7 @@ export default {
             let grupos = new Array();
             grupos = ['0/0/3', '0/2/4'];
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+            HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -190,7 +190,7 @@ export default {
             let grupos = new Array();
             grupos = ['0/0/3'];
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+            HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -212,7 +212,7 @@ export default {
             let grupos = new Array();
             grupos = ['0/2/4'];
             console.log('Hall Recibidor Izquierdo');
-            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+            HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -237,7 +237,7 @@ export default {
             let grupos = new Array();
             grupos = ['1/3/11','1/3/10'];
             console.log('Hall Sala de prensa');
-            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+            HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -260,7 +260,7 @@ export default {
             let grupos = new Array();
             grupos = ['0/0/9'];
             console.log('Sala de control recibidor');
-            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+            HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -282,7 +282,7 @@ export default {
             let grupos = new Array();
             grupos = ['1/3/8'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+            HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {

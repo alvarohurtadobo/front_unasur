@@ -26,6 +26,7 @@ import au from '/imports/ui/bloques/auditorio/Opt_au.vue';
 import accesos_au from "/imports/ui/bloques/auditorio/Accesos_au.vue";
 import iluminacion_au from '/imports/ui/bloques/auditorio/Ilum_au.vue';
 import iluminacion_au_a from "/imports/ui/bloques/auditorio/Ilum_au_a.vue";
+import dimmer_auditorios from "/imports/ui/bloques/auditorio/Dim_auditorios.vue";
 import iluminacion_au_b from "/imports/ui/bloques/auditorio/Ilum_au_b.vue";
 import iluminacion_au_prin from "/imports/ui/bloques/auditorio/Ilum_au_prin.vue";
 import aire_au_prin from '/imports/ui/bloques/auditorio/Aire_au_prin.vue';
@@ -131,9 +132,13 @@ RouterFactory.configure(router => {
             component: iluminacion_au_a
           },
           {
+            path: "/dimmer_auditorios",
+            component: dimmer_auditorios
+          },
+          {
             path: "/iluminacion_au_b",
             component: iluminacion_au_b
-          }
+          },
         ]
       },
       {

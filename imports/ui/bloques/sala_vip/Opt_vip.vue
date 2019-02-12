@@ -11,7 +11,7 @@
                             <div class="col-md-9 accion">
                                 Iluminacion VIP
                             </div>
-                            <div class="col-md-3 accion">
+                            <div class="col-md-3 accion text-center">
                                 <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Acceso2.png': '/images/layout/Acceso2.png']" alt="">
                             </div>
                         </div>
@@ -24,7 +24,7 @@
                             <div class="col-md-9 accion">
                                 Dimmerización
                             </div>
-                            <div class="col-md-3 accion">
+                            <div class="col-md-3 accion text-center">
                                 <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                             <div class="col-md-9 accion">
                                 RGB VIP
                             </div>
-                            <div class="col-md-3 accion">
+                            <div class="col-md-3 accion text-center">
                                 <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                             <div class="col-md-9 accion">
                                 Aire Acondicionado
                             </div>
-                            <div class="col-md-3 accion">
+                            <div class="col-md-3 accion text-center">
                                 <img v-bind:src="[encendido_acceso_1 ? '/images/layout/clima.png': '/images/layout/Clima.png']" alt="">
                             </div>
                         </div>
@@ -81,5 +81,8 @@ a hover{
 }
 .titulo{
     background-color: rgba(54, 70, 136, 0.6);
+}
+img{
+    width: 36%;
 }
 </style>

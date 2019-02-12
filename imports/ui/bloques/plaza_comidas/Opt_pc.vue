@@ -11,7 +11,7 @@
                             <div class="col-md-9 accion">
                                 Accesos Plaza de Comidas
                             </div>
-                            <div class="col-md-3 accion">
+                            <div class="col-md-3 accion text-center">
                                 <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Acceso2.png': '/images/layout/Acceso2.png']" alt="">
                             </div>
                         </div>
@@ -21,7 +21,7 @@
                             <div class="col-md-9 accion">
                                 Iluminación
                             </div>
-                            <div class="col-md-3 accion">
+                            <div class="col-md-3 accion text-center">
                                 <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
                             </div>
                         </div>
@@ -40,5 +40,7 @@ export default {
 </script>
 
 <style scoped>
-
+img{
+    width: 36%;
+}
 </style>

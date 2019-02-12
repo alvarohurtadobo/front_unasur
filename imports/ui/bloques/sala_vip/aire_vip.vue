@@ -4,15 +4,15 @@
             <span class="text-center">Aire acondicionado VIP</span>
         </div>
         <div class="col-md-12">
-            <div ref="aire_s_reuniones_vip" class="row bloque_opcion" v-on:click='aire_s_reuniones_vip' data-estado="1">
+            <div ref="on_aire_s_reuniones_vip" class="row bloque_opcion" v-on:click='on_aire_s_reuniones_vip' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_aire_s_reuniones_vip ? '/images/layout/Clima.png': '/images/layout/Clima.png']" alt="">
+                    <img v-bind:src="[encendido_on_aire_s_reuniones_vip ? '/images/layout/Clima.png': '/images/layout/Clima.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Aire Sala de reuniones VIP
+                    ON Aire Sala de reuniones VIP
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_aire_s_reuniones_vip ? '/images/layout/Clima.png': '/images/layout/Clima.png']" alt="">
+                    <img v-bind:src="[encendido_on_aire_s_reuniones_vip ? '/images/layout/Clima.png': '/images/layout/Clima.png']" alt="">
                 </div>
             </div>
             <div ref="aire_s_cafeteria_vip" class="row bloque_opcion" v-on:click='aire_s_cafeteria_vip' data-estado="1">
@@ -33,26 +33,26 @@
 <script>
 export default {
     props:{
-        encendido_aire_s_reuniones_vip: Boolean,
+        encendido_on_aire_s_reuniones_vip: Boolean,
         encendido_aire_s_cafeteria_vip: Boolean,
     },
     methods:{
-        aire_s_reuniones_vip() {
-            let bloque_1 = new Array();
-            bloque_1 = ['8/0/49'];
-            const button = this.$refs.aire_s_reuniones_vip
+        on_aire_s_reuniones_vip() {
+            // let bloque_1 = new Array();
+            let bloque_1 = '8/0/49';
+            const button = this.$refs.on_aire_s_reuniones_vip
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/air',
-                { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
+            let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices/air',
+                { data: { "ip": "192.168.4.214", "rgroup": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
                         console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                         if (valor == '0') {
-                            this.encendido_aire_s_reuniones_vip = false;
+                            this.encendido_on_aire_s_reuniones_vip = false;
                             // button.dataset.estado = '1';
                         } else{
-                            this.encendido_aire_s_reuniones_vip = true;
+                            this.encendido_on_aire_s_reuniones_vip = true;
                             // button.dataset.estado = '0';
                         }
                     } else{
@@ -61,13 +61,13 @@ export default {
             });
         },
         aire_s_cafeteria_vip() {
-            let bloque_1 = new Array();
-            bloque_1 = ['8/1/49'];
+            // let bloque_1 = new Array();
+            let bloque_1 = '8/1/49';
             const button = this.$refs.aire_s_cafeteria_vip
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/air',
-                { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
+            let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices/air',
+                { data: { "ip": "192.168.4.214", "rgroup": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
                         console.log("Los datos recibidos son: " + JSON.stringify(result.data));
