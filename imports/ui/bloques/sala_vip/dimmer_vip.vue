@@ -83,7 +83,7 @@ export default {
                 valor = valor - 5;
             }
             console.log("Estado: "+valor+ ' -- '+t+' -- '+n);
-            let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices/dimmer_abs/',
+            let result = HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices/dimmer_abs/',
                     { data: { "ip": "192.168.4.214",
                               "dimmname": n,
                               "absolute": valor

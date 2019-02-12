@@ -43,7 +43,7 @@ export default {
             const button = this.$refs.on_aire_s_reuniones_vip
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices/air',
+            let result = HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices/air',
                 { data: { "ip": "192.168.4.214", "rgroup": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -66,7 +66,7 @@ export default {
             const button = this.$refs.aire_s_cafeteria_vip
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://172.18.0.3:3001/api/knx/devices/air',
+            let result = HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices/air',
                 { data: { "ip": "192.168.4.214", "rgroup": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
