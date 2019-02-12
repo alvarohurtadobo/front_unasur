@@ -91,7 +91,7 @@ export default {
             const button = this.$refs.aire_on_au_prin
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices/air',
+            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/air',
                 { data: { "ip": "192.168.6.254", "rgroup": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -114,7 +114,7 @@ export default {
             const button = this.$refs.aire_off_au_prin
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices/air',
+            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/air',
                 { data: { "ip": "192.168.6.254", "rgroup": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -137,7 +137,7 @@ export default {
             const button = this.$refs.on_aire_au_a
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices/air',
+            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/air',
                 { data: { "ip": "192.168.6.254", "rgroup": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -160,7 +160,7 @@ export default {
             const button = this.$refs.off_aire_au_a
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices/air',
+            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/air',
                 { data: { "ip": "192.168.6.254", "rgroup": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -183,7 +183,7 @@ export default {
             const button = this.$refs.on_aire_au_b
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices/air',
+            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/air',
                 { data: { "ip": "192.168.6.254", "rgroup": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -206,7 +206,7 @@ export default {
             const button = this.$refs.off_aire_au_b
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices/air',
+            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/air',
                 { data: { "ip": "192.168.6.254", "rgroup": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {

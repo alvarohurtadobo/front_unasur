@@ -56,7 +56,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/0/4'];
             console.log('Parqueo Sud');
-            HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices',
+            HTTP.call('POST', 'http://app:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -79,7 +79,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/0/3'];
             console.log('Parqueo Norte');
-            HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices',
+            HTTP.call('POST', 'http://app:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -101,7 +101,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/0/0','2/0/1', '2/0/2'];
             console.log('Ingreso Parqueo');
-            HTTP.call('POST', 'http://172.21.0.3:3001/api/knx/devices',
+            HTTP.call('POST', 'http://app:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
