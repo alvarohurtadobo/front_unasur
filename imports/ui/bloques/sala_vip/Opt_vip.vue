@@ -42,6 +42,18 @@
                         </div>
                     </router-link>
                 </div>
+                <div class="col-md-12">
+                    <router-link to="aire_vip" class="text-decoration-none">
+                        <div class="row">
+                            <div class="col-md-9 accion">
+                                Aire Acondicionado
+                            </div>
+                            <div class="col-md-3 accion">
+                                <img v-bind:src="[encendido_acceso_1 ? '/images/layout/clima.png': '/images/layout/Clima.png']" alt="">
+                            </div>
+                        </div>
+                    </router-link>
+                </div>
             </div>
             <router-view></router-view>
         </div>

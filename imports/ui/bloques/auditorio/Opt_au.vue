@@ -36,6 +36,7 @@
                         </div>
                     </div>
                 </router-link>
+                
                 <router-link to="iluminacion_au_a" class="text-decoration-none">
                     <div class="row">
                         <div class="col-md-9 accion">
@@ -53,6 +54,16 @@
                         </div>
                         <div class="col-md-3 accion">
                             <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
+                        </div>
+                    </div>
+                </router-link>
+                <router-link to="aire_au_prin" class="text-decoration-none">
+                    <div class="row">
+                        <div class="col-md-9 accion">
+                            Aire Auditorios
+                        </div>
+                        <div class="col-md-3 accion">
+                            <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Clima.png': '/images/layout/Clima.png']" alt="">
                         </div>
                     </div>
                 </router-link>
@@ -84,5 +95,8 @@ a hover{
 }
 .titulo{
     background-color: rgba(54, 70, 136, 0.6);
+}
+img{
+    width: 50%;
 }
 </style>

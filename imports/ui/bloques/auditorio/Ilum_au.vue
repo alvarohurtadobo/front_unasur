@@ -70,6 +70,28 @@
                     <img v-bind:src="[encendido_au_p1 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
+            <div ref="au_p1_wc_mujeres" class="row bloque_opcion" v-on:click='au_p1_wc_mujeres' data-estado="1">
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_p1_wc_mujeres ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+                <div class="col-md-8 opcion">
+                    Baño Mujeres Piso 1
+                </div>
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_p1_wc_mujeres ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+            </div>
+            <div ref="au_p1_wc_varones" class="row bloque_opcion" v-on:click='au_p1_wc_varones' data-estado="1">
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_p1_wc_varones ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+                <div class="col-md-8 opcion">
+                    Baño Varones Piso 1
+                </div>
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_p1_wc_varones ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+            </div>
             <div ref="au_p2" class="row bloque_opcion" v-on:click='au_p2' data-estado="1">
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_p2 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -158,21 +180,6 @@
                     <img v-bind:src="[encendido_au_recib_ofis ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
-
-                <!-- <button ref="au_ing" class="btn" v-bind:class="[encendido_au_ing ? 'btn-warning' : 'btn-primary']" v-on:click='au_ing' data-estado="1"><i class="fa fa-bolt"></i> Ingreso</button> -->
-                    <!-- <button ref="au_rampa_sud" class="btn" v-bind:class="[encendido_au_rampa_sud ? 'btn-warning' : 'btn-primary']" v-on:click='au_rampa_sud' data-estado="1"><i class="fa fa-bolt"></i> Ilum. Rampa Sud</button> -->
-                    <!-- <button ref="au_prin_laterales" class="btn" v-bind:class="[encendido_au_prin_laterales ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_laterales' data-estado="1"><i class="fa fa-bolt"></i> Luces Laterales</button> -->
-                    <!-- <button ref="au_pasillo_mezzanine" class="btn" v-bind:class="[encendido_au_pasillo_mezzanine ? 'btn-warning' : 'btn-primary']" v-on:click='au_pasillo_mezzanine' data-estado="1"><i class="fa fa-bolt"></i> </button> -->
-                    <!-- <button ref="au_p1" class="btn" v-bind:class="[encendido_au_p1 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p1' data-estado="1"><i class="fa fa-bolt"></i> Iluminación P1</button> -->
-                    <!-- <button ref="au_p2" class="btn" v-bind:class="[encendido_au_p2 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p2' data-estado="1"><i class="fa fa-bolt"></i> Iluminación P2</button> -->
-                    <!-- <button ref="au_p4" class="btn" v-bind:class="[encendido_au_p4 ? 'btn-warning' : 'btn-primary']" v-on:click='au_p4' data-estado="1"><i class="fa fa-bolt"></i> Iluminación P4</button> -->
-                    <!-- <button ref="au_ext_norte" class="btn" v-bind:class="[encendido_au_ext_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_ext_norte' data-estado="1"><i class="fa fa-bolt"></i> Luz Ext. Norte</button> -->
-                    <!-- <button ref="au_prin_ingr_pas_norte" class="btn" v-bind:class="[encendido_au_prin_ingr_pas_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_prin_ingr_pas_norte' data-estado="1"><i class="fa fa-bolt"></i> Ingreso Pasillo Norte</button> -->
-                    <!-- <button ref="au_pasillo_norte" class="btn" v-bind:class="[encendido_au_pasillo_norte ? 'btn-warning' : 'btn-primary']" v-on:click='au_pasillo_norte' data-estado="1"><i class="fa fa-bolt"></i> Luz Pas. interior Norte</button> -->
-                    <!-- <button ref="au_clispas_ramp_sud" class="btn" v-bind:class="[encendido_au_clispas_ramp_sud ? 'btn-warning' : 'btn-primary']" v-on:click='au_clispas_ramp_sud' data-estado="1"><i class="fa fa-bolt"></i> Chispas Rampa Sud</button> -->
-                    <!-- <button ref="au_pasillo_gradas" class="btn" v-bind:class="[encendido_au_pasillo_gradas ? 'btn-warning' : 'btn-primary']" v-on:click='au_pasillo_gradas' data-estado="1"><i class="fa fa-bolt"></i> Pasillo gradas</button> -->
-                    <!-- <button ref="au_cafeteria" class="btn" v-bind:class="[encendido_au_cafeteria ? 'btn-warning' : 'btn-primary']" v-on:click='au_cafeteria' data-estado="1"><i class="fa fa-bolt"></i> Cafetería</button> -->
-                    <!-- <button ref="au_recib_ofis" class="btn" v-bind:class="[encendido_au_recib_ofis ? 'btn-warning' : 'btn-primary']" v-on:click='au_recib_ofis' data-estado="1"><i class="fa fa-bolt"></i> Recibidor Oficinas</button> -->
         </div>
     </div>
 </template>
@@ -184,6 +191,8 @@ export default {
         encendido_au_rampa_sud: Boolean,
         encendido_au_pasillo_mezzanine: Boolean,
         encendido_au_p1: Boolean,
+        encendido_au_p1_wc_mujeres: Boolean,
+        encendido_au_p1_wc_varones: Boolean,
         encendido_au_p2: Boolean,
         encendido_au_p4: Boolean,
         encendido_au_prin_laterales: Boolean,
@@ -282,6 +291,75 @@ export default {
                                 button.dataset.estado = '1';
                             } else{
                                 this.encendido_au_pasillo_mezzanine = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_p1() {
+            let bloque_1 = new Array();
+            bloque_1 = ["5/2/0"];
+            const button = this.$refs.au_p1
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_p1 = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_p1 = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_p1_wc_mujeres() {
+            let bloque_1 = new Array();
+            bloque_1 = ["0/2/2"];
+            const button = this.$refs.au_p1_wc_mujeres
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_p1_wc_mujeres = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_p1_wc_mujeres = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_p1_wc_varones() {
+            let bloque_1 = new Array();
+            bloque_1 = ["0/2/5"];
+            const button = this.$refs.au_p1_wc_varones
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_p1_wc_varones = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_p1_wc_varones = true;
                                 button.dataset.estado = '0';
                             }
                         } else{

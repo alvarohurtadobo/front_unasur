@@ -87,6 +87,17 @@
                     <img v-bind:src="[encendido_pc_techo ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
+            <div ref="pc_piso" class="row bloque_opcion" v-on:click='pc_piso' data-estado="1">
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_pc_piso ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+                <div class="col-md-8 opcion">
+                    Luces de Piso
+                </div>
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_pc_piso ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+            </div>
         
             <div ref="pc_banos" class="row bloque_opcion" v-on:click='pc_banos' data-estado="1">
                 <div class="col-md-2">
@@ -128,6 +139,7 @@ export default {
         // encendido_pc_mirador: Boolean,
         encendido_pc_banos: Boolean,
         encendido_pc_ctrl: Boolean,
+        encendido_pc_piso: Boolean,
     },
     methods:{
         pc_pb() {
@@ -315,6 +327,29 @@ export default {
         //                 }
         //         });
         // },
+        pc_piso() {
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/5'];
+            const button = this.$refs.pc_piso
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.2.86", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_pc_piso = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_pc_piso = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
         pc_banos() {
             let bloque_1 = new Array();
             bloque_1 = ['0/1/2'];
