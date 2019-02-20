@@ -26,6 +26,16 @@
                             </div>
                         </div>
                     </router-link>
+                    <router-link to="incendios_pc" class="text-decoration-none">
+                        <div class="row">
+                            <div class="col-md-9 accion">
+                                Alarma incendio
+                            </div>
+                            <div class="col-md-3 accion text-center">
+                                <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
+                            </div>
+                        </div>
+                    </router-link>
                 
             </div>
             <router-view></router-view>

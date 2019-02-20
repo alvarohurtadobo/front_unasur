@@ -6,91 +6,91 @@
         <div class="col-md-12">
             <div ref="acceso_1" class="row bloque_opcion" v-on:click='acceso_1' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     
                     Puerta acceso Hall 1
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
             </div>
             <div ref="acceso_2" class="row bloque_opcion" v-on:click='acceso_2' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_2 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_2 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Puerta acceso Hall 2
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_2 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_2 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
             </div>
             <div ref="acceso_3" class="row bloque_opcion" v-on:click='acceso_3' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_3 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_3 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Puerta acceso Hall 3
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_3 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_3 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
             </div>
             <div ref="acceso_4" class="row bloque_opcion" v-on:click='acceso_4' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_4 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_4 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Puerta acceso Hall 4
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_4 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_4 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
             </div>
             <div ref="acceso_ascensores_1" class="row bloque_opcion" v-on:click='acceso_ascensores_1' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_ascensores_1 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_ascensores_1 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Puerta ascensores 1
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_ascensores_1 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_ascensores_1 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
             </div>
             <div ref="acceso_ascensores_2" class="row bloque_opcion" v-on:click='acceso_ascensores_2' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_ascensores_2 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_ascensores_2 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Puerta ascensores 2
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_ascensores_2 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_ascensores_2 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
             </div>
             <div ref="acceso_ascensores_3" class="row bloque_opcion" v-on:click='acceso_ascensores_3' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_ascensores_3 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_ascensores_3 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Puerta ascensores 3
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_ascensores_3 ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_ascensores_3 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
             </div>
             <div ref="acceso_garage" class="row bloque_opcion" v-on:click='acceso_garage' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_garage ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_garage ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Puerta Garage
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_acceso_garage ? '/images/layout/Iconos_peques/AccesoA.png': '/images/layout/Iconos_peques/AccesoB.png']" alt="">
+                    <img v-bind:src="[encendido_acceso_garage ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/1/0'];
             console.log('Acceso Hall 1');
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -139,7 +139,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/1/1'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -161,7 +161,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/1/2'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -183,7 +183,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/1/3'];
             console.log('Sala de prensa');
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -205,7 +205,7 @@ export default {
             let grupos = new Array();
             grupos = ['1/1/8'];
             console.log('Acceso ascensores 1, Grupo: '+ grupos);
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -227,7 +227,7 @@ export default {
             let grupos = new Array();
             grupos = ['1/1/9'];
             console.log('Acceso ascensores 2, grupos: '+grupos);
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -249,7 +249,7 @@ export default {
             let grupos = new Array();
             grupos = ['1/1/10'];
             console.log('Acceso ascensores 3, Grupos: '+grupos);
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -271,7 +271,7 @@ export default {
             let grupos = new Array();
             grupos = ['2/0/7'];
             console.log('Acceso garage, grupo: '+grupos);
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {

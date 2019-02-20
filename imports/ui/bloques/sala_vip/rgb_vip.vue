@@ -1,106 +1,106 @@
 <template>
-    <div class="col-md-6">
+    <div class="col-md-6 scroll">
         <div class="text-center subtitulo">
             <span class="text-center">RGB VIP</span>
         </div>
         <div class="col-md-12">
             <div ref="live_rgb" class="row bloque_opcion" v-on:click='live_rgb' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_live_rgb ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_live_rgb ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Encendido RGB
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_live_rgb ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_live_rgb ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="rgb_azul" class="row bloque_opcion" v-on:click='rgb_azul' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_azul ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_azul ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     AZUL
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_azul ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_azul ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="rgb_verde" class="row bloque_opcion" v-on:click='rgb_verde' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_verde ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_verde ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     VERDE
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_verde ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_verde ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="rgb_rojo" class="row bloque_opcion" v-on:click='rgb_rojo' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_rojo ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_rojo ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     ROJO
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_rojo ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_rojo ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="rgb_plateado" class="row bloque_opcion" v-on:click='rgb_plateado' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_plateado ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_plateado ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     PLATEADO
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_plateado ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_plateado ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="rgb_efecto_1" class="row bloque_opcion" v-on:click='rgb_efecto_1' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_efecto_1 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_efecto_1 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Efecto 1
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_efecto_1 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_efecto_1 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="rgb_efecto_2" class="row bloque_opcion" v-on:click='rgb_efecto_2' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_efecto_2 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_efecto_2 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Efecto 2
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_efecto_2 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_efecto_2 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="rgb_efecto_3" class="row bloque_opcion" v-on:click='rgb_efecto_3' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_efecto_3 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_efecto_3 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Efecto 3
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_efecto_3 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_efecto_3 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
             <div ref="rgb_efecto_4" class="row bloque_opcion" v-on:click='rgb_efecto_4' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_efecto_4 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_efecto_4 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Efecto 4
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_rgb_efecto_4 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
+                    <img v-bind:src="[encendido_rgb_efecto_4 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
         </div>
@@ -126,7 +126,7 @@ export default {
             const button = this.$refs.live_rgb
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/rgb/live/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/live/',
                     { data: { "ip": "192.168.4.214",
                              "order":parseInt(valor)
                             } 
@@ -151,7 +151,7 @@ export default {
             const button = this.$refs.rgb_azul
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Azul"} 
                             },
@@ -175,7 +175,7 @@ export default {
             const button = this.$refs.rgb_verde
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Verde"} 
                             },
@@ -199,7 +199,7 @@ export default {
             const button = this.$refs.rgb_rojo
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Rojo"} 
                             },
@@ -223,7 +223,7 @@ export default {
             const button = this.$refs.rgb_plateado
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Plateado"} 
                             },
@@ -247,7 +247,7 @@ export default {
             const button = this.$refs.rgb_efecto_1
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Efecto 1"} 
                             },
@@ -271,7 +271,7 @@ export default {
             const button = this.$refs.rgb_efecto_2
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Efecto 2"} 
                             },
@@ -295,7 +295,7 @@ export default {
             const button = this.$refs.rgb_efecto_3
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Efecto 3"} 
                             },
@@ -319,7 +319,7 @@ export default {
             const button = this.$refs.rgb_efecto_4
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/rgb/',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/rgb/',
                     { data: { "ip": "192.168.4.214",
                                 "mode": "Efecto 4"} 
                             },

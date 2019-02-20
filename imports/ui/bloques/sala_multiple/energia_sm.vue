@@ -55,6 +55,20 @@
                         </table>
                     </div>
             </div>
+        <hr class= "division_top">
+        <div class="col-md-12">
+            <div ref="reset_incendios" class="row bloque_opcion" v-on:click='reset_incendios' data-estado="0">
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_reset_incendios ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+                <div class="col-md-8 opcion">
+                    Reset Incendios
+                </div>
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_reset_incendios ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -62,6 +76,7 @@
 export default {
     props: {
         encendido_sm_ctrl_energia: Boolean,
+        encendido_reset_incendios: Boolean
     },
     data() {
         return{
@@ -79,7 +94,7 @@ export default {
             let valor = button.dataset.estado,
             d_voltage = 0;
             console.log("Estado: "+valor);
-            HTTP.call('POST', 'http://app:3001/api/modbus/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/modbus/devices',
                 { data: { "ip": "192.168.2.87", "parameter": "voltage", "type": "instant" } },
                 (error, result) => {
                     if (!error) {
@@ -100,7 +115,7 @@ export default {
             let valor = button.dataset.estado,
             d_voltage = 0;
             console.log("Estado: "+valor);
-            HTTP.call('POST', 'http://app:3001/api/modbus/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/modbus/devices',
                 { data: { "ip": "192.168.2.87", "parameter": "current", "type": "instant" } },
                 (error, result) => {
                     if (!error) {
@@ -115,6 +130,28 @@ export default {
                         alert("Se perdio la conexion con el server!");
                     }
                 });  
+        },
+        reset_incendios() {
+            const button = this.$refs.reset_incendios;
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+            let grupos = new Array();
+            grupos = ['1/2/14'];
+            console.log('Reset incendios');
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
+                (error, result) => {
+                    if (!error) {
+                        console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                        if (valor == '0') {
+                            this.encendido_reset_incendios = false;
+                            button.dataset.estado = '1';
+                        } else{
+                            this.encendido_reset_incendios = true;
+                            button.dataset.estado = '0';
+                        }
+                    }
+                });
         },
     }
 

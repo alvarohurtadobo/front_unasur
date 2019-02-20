@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-6">
+    <div class="col-md-6 scroll">
         <div class="text-center subtitulo">
             <span class="text-center">Iluminación Auditorio B</span>
         </div>
@@ -9,7 +9,7 @@
                     <img v-bind:src="[encendido_au_ab_pasillo ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Pasillo A/B
+                    Lobby auditorios A/B
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_ab_pasillo ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -22,7 +22,7 @@
                     <img v-bind:src="[encendido_au_b_butacas ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Butacas Total
+                    Encendido Total
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_b_butacas ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -35,7 +35,7 @@
                     <img v-bind:src="[encendido_au_b_butacas_tenue ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Butacas Ténue
+                    Encendido Led
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_b_butacas_tenue ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -48,7 +48,7 @@
                     <img v-bind:src="[encendido_au_b_butacas_ojos_gato ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Butacas Ojos de gato
+                    Modo pantalla
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_b_butacas_ojos_gato ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -56,6 +56,32 @@
             </div>
         </div>
         <div class="col-md-12">
+            <div ref="au_b_butacas_disertacion" class="row bloque_opcion" v-on:click='au_b_butacas_disertacion' data-estado="1">
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_b_butacas_disertacion ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+                <div class="col-md-8 opcion">
+                    Modo disertación 1
+                </div>
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_b_butacas_disertacion ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div ref="au_b_butacas_disertacion_2" class="row bloque_opcion" v-on:click='au_b_butacas_disertacion_2' data-estado="1">
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_b_butacas_disertacion_2 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+                <div class="col-md-8 opcion">
+                    Modo disertación 2
+                </div>
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_b_butacas_disertacion_2 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-md-12">
             <div ref="au_b_butacas_rombo" class="row bloque_opcion" v-on:click='au_b_butacas_rombo' data-estado="1">
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_b_butacas_rombo ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -67,17 +93,30 @@
                     <img v-bind:src="[encendido_au_b_butacas_rombo ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="col-md-12">
             <div ref="au_b_butacas_parcial" class="row bloque_opcion" v-on:click='au_b_butacas_parcial' data-estado="1">
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_b_butacas_parcial ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Butacas Parcial
+                    Encendido Parcial
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_b_butacas_parcial ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div ref="au_b_limpieza" class="row bloque_opcion" v-on:click='au_b_limpieza' data-estado="1">
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_b_limpieza ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+                <div class="col-md-8 opcion">
+                    Modo Limpieza
+                </div>
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_b_limpieza ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
         </div>
@@ -87,7 +126,7 @@
                     <img v-bind:src="[encendido_au_b_escenario_a ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Escenario Aud. B modo 1
+                    Escenario sección 1
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_b_escenario_a ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -100,7 +139,7 @@
                     <img v-bind:src="[encendido_au_b_escenario_b ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Escenario Aud. B modo 2
+                    Escenario sección 2
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_b_escenario_b ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -113,7 +152,7 @@
                     <img v-bind:src="[encendido_au_b_escenario_c ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Escenario Aud. B modo 3
+                    Escenario sección 3
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_b_escenario_c ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -145,6 +184,9 @@ export default {
         encendido_au_b_butacas_tenue: Boolean,
         encendido_au_b_butacas_rombo: Boolean,
         encendido_au_b_butacas_parcial: Boolean,
+        encendido_au_b_butacas_disertacion: Boolean,
+        encendido_au_b_butacas_disertacion_2: Boolean,
+        encendido_au_b_limpieza: Boolean,
     },
     methods:{
         au_ab_pasillo() {
@@ -153,7 +195,7 @@ export default {
             const button = this.$refs.au_ab_pasillo
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -171,15 +213,13 @@ export default {
                 });
         },
         
-
-
         au_b_butacas() {
             let bloque_1 = new Array();
-            bloque_1 = ['5/0/2'];
+            bloque_1 = ['5/0/2', '0/0/1', '0/0/2', '0/0/3'];
             const button = this.$refs.au_b_butacas
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -202,7 +242,7 @@ export default {
             const button = this.$refs.au_b_butacas_tenue
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -225,7 +265,7 @@ export default {
             const button = this.$refs.au_b_butacas_ojos_gato
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -242,13 +282,59 @@ export default {
                         }
                 });
         },
+        au_b_butacas_disertacion(){
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/1', '0/1/4'];
+            const button = this.$refs.au_b_butacas_disertacion
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_b_butacas_disertacion = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_b_butacas_disertacion = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
+        au_b_butacas_disertacion_2(){
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/1', '0/0/2', '0/0/3','0/1/4'];
+            const button = this.$refs.au_b_butacas_disertacion_2
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_b_butacas_disertacion_2 = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_b_butacas_disertacion_2 = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
         au_b_butacas_parcial(){
             let bloque_1 = new Array();
-            bloque_1 = ['0/1/5'];
+            bloque_1 = ['0/1/5','0/0/2', '0/1/4'];
             const button = this.$refs.au_b_butacas_parcial
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -265,13 +351,36 @@ export default {
                         }
                 });
         },
+        au_b_limpieza(){
+            let bloque_1 = new Array();
+            bloque_1 = ['0/0/2','0/1/6', '0/1/4'];
+            const button = this.$refs.au_b_limpieza
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_b_limpieza = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_b_limpieza = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
         au_b_butacas_rombo(){
             let bloque_1 = new Array();
             bloque_1 = ['0/1/12'];
             const button = this.$refs.au_b_butacas_rombo
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -294,7 +403,7 @@ export default {
             const button = this.$refs.au_b_escenario_a
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -317,7 +426,7 @@ export default {
             const button = this.$refs.au_b_escenario_b
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -340,7 +449,7 @@ export default {
             const button = this.$refs.au_b_escenario_c
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {

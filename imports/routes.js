@@ -15,6 +15,7 @@ import riego from '/imports/ui/bloques/sala_multiple/riego_sm.vue';
 import pc from '/imports/ui/bloques/plaza_comidas/Opt_pc.vue';
 import accesos_pc from "/imports/ui/bloques/plaza_comidas/Accesos_pc.vue";
 import iluminacion_pc from '/imports/ui/bloques/plaza_comidas/Ilum_pc.vue';
+import incendio_pc from '/imports/ui/bloques/plaza_comidas/Incendio_pc.vue';
 // ************* SALA VIP ********************
 import vip from '/imports/ui/bloques/sala_vip/Opt_vip.vue';
 import iluminacion_vip from '/imports/ui/bloques/sala_vip/iluminacion_vip.vue';
@@ -30,6 +31,7 @@ import dimmer_auditorios from "/imports/ui/bloques/auditorio/Dim_auditorios.vue"
 import iluminacion_au_b from "/imports/ui/bloques/auditorio/Ilum_au_b.vue";
 import iluminacion_au_prin from "/imports/ui/bloques/auditorio/Ilum_au_prin.vue";
 import aire_au_prin from '/imports/ui/bloques/auditorio/Aire_au_prin.vue';
+import camaras_au_prin from '/imports/ui/bloques/auditorio/Camaras_au_prin.vue'
 RouterFactory.configure(router => {
     router.addRoutes([
       {
@@ -80,6 +82,10 @@ RouterFactory.configure(router => {
           {
             path: "/iluminacion_pc",
             component: iluminacion_pc
+          },
+          {
+            path: "/incendio_pc",
+            component: incendio_pc
           }
         ]
       },
@@ -138,6 +144,10 @@ RouterFactory.configure(router => {
           {
             path: "/iluminacion_au_b",
             component: iluminacion_au_b
+          },
+          {
+            path: "/camaras_au_prin",
+            component: camaras_au_prin
           },
         ]
       },

@@ -9,7 +9,7 @@
                     <img v-bind:src="[encendido_sm_b1 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Bloque 1
+                    Bloque Sud
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_sm_b1 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-md-8 opcion">
                     
-                    Bloque 2
+                    Bloque Central
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_sm_b2 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -32,8 +32,7 @@
                     <img v-bind:src="[encendido_sm_b3 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    
-                    Bloque 3
+                    Bloque Norte
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_sm_b3 ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -45,7 +44,7 @@
                 </div>
                 <div class="col-md-8 opcion">
                     
-                    Luces Ramplas
+                    Luces Bajo Rampas
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_sm_ext ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -113,7 +112,7 @@ export default {
         estado_sm(){
             let bloque_1 = new Array();
             bloque_1 = ['1/2/3', '1/0/8','1/3/0', '1/0/0', '2/0/6', '0/1/0', '0/0/1', '1/3/11', '2/0/4', '2/0/3', '0/0/7', '0/0/9', '1/3/8', '2/1/0', '2/1/1', '2/1/2', '2/1/3', '1/1/8', '1/1/9', '1/1/10'];
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices/status',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/status',
                 { data: { "ip": "192.168.8.254", "group": bloque_1} },
                 (error, result) => {
                     if (!error) {
@@ -131,7 +130,7 @@ export default {
         let valor = button.dataset.estado;
         console.log("Estado: "+valor);
         
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -157,7 +156,7 @@ export default {
             let bloque_2 = new Array();
             bloque_2 = ['1/0/8','1/3/2', '1/3/3', '1/2/0', '1/2/5','1/2/6'];
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": bloque_2, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -179,7 +178,7 @@ export default {
             let bloque_3 = new Array();
             bloque_3 = ['1/3/0','1/3/1', '1/3/5', '1/3/6', '1/2/4'];
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": bloque_3, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {
@@ -202,7 +201,7 @@ export default {
             exterior = ['1/0/0','1/0/1', '1/0/2', '1/0/3', '1/0/4', '1/0/5', '1/0/6', '1/0/7','1/0/9', '1/0/10', '1/0/11', '1/2/2'];
              //exterior = ['2/0/6']; avenidas
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": exterior, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -224,7 +223,7 @@ export default {
             let exterior = new Array();
             exterior = ['2/0/6']; 
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": exterior, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -246,7 +245,7 @@ export default {
             let exterior = new Array();
             exterior = ['0/1/0']; 
             console.log('Sala Multiple');
-            HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": exterior, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {

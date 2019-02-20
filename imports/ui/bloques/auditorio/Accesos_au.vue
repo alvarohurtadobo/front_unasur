@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div ref="au_puerta_disc_esc" class="row bloque_opcion" v-on:click='au_puerta_disc_esc' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_au_puerta_disc_esc ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                    <img v-bind:src="[encendido_au_puerta_disc_esc ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Puerta Discapacitados
@@ -20,7 +20,7 @@
                     <img v-bind:src="[encendido_au_puerta_2_izq ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Puerta Izquierda
+                    Acceso principal 1
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_puerta_2_izq ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
@@ -31,7 +31,7 @@
                     <img v-bind:src="[encendido_au_puerta_1_der ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Puerta Derecha
+                    Acceso principal 2
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_puerta_1_der ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
@@ -42,7 +42,7 @@
                     <img v-bind:src="[encendido_au_puerta_ofi_1 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Puerta Oficinas 1
+                    Acceso Oficinas 1
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_puerta_ofi_1 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
@@ -53,7 +53,7 @@
                     <img v-bind:src="[encendido_au_puerta_ofi_2 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Puerta Oficinas 2
+                    Acceso Oficinas 2
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_puerta_ofi_2 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
@@ -64,7 +64,7 @@
                     <img v-bind:src="[encendido_au_puerta_ofi_3 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Puerta Oficinas 3
+                    Acceso Oficinas 3
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_puerta_ofi_3 ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
@@ -75,7 +75,7 @@
                     <img v-bind:src="[encendido_au_puerta_ofi_escalera ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Puerta Ofi. Gradas
+                    Acceso Ofi. Gradas
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_puerta_ofi_escalera ? '/images/layout/Iconos_peques/AccesoB.png': '/images/layout/Iconos_peques/AccesoA.png']" alt="">
@@ -110,7 +110,7 @@ export default {
             const button = this.$refs.au_puerta_1_der
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -133,7 +133,7 @@ export default {
             const button = this.$refs.au_puerta_2_izq
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -156,7 +156,7 @@ export default {
             const button = this.$refs.au_puerta_disc_esc
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -179,7 +179,7 @@ export default {
             const button = this.$refs.au_puerta_ofi_1
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -202,7 +202,7 @@ export default {
             const button = this.$refs.au_puerta_ofi_2
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -225,7 +225,7 @@ export default {
             const button = this.$refs.au_puerta_ofi_3
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -248,7 +248,7 @@ export default {
             const button = this.$refs.au_puerta_ofi_escalera
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {

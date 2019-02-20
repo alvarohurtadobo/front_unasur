@@ -47,16 +47,6 @@
                         </div>
                     </div>
                 </router-link>
-                <router-link to="dimmer_auditorios" class="text-decoration-none">
-                    <div class="row">
-                        <div class="col-md-9 accion">
-                            Dimmer Auditorios
-                        </div>
-                        <div class="col-md-3 accion text-center">
-                            <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
-                        </div>
-                    </div>
-                </router-link>
                 <router-link to="iluminacion_au_b" class="text-decoration-none">
                     <div class="row">
                         <div class="col-md-9 accion">
@@ -67,10 +57,30 @@
                         </div>
                     </div>
                 </router-link>
+                <router-link to="dimmer_auditorios" class="text-decoration-none">
+                    <div class="row">
+                        <div class="col-md-9 accion">
+                            Dimmer Auditorios
+                        </div>
+                        <div class="col-md-3 accion text-center">
+                            <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Iluminacion2.png': '/images/layout/Iluminacion2.png']" alt="">
+                        </div>
+                    </div>
+                </router-link>
                 <router-link to="aire_au_prin" class="text-decoration-none">
                     <div class="row">
                         <div class="col-md-9 accion">
                             Aire Auditorios
+                        </div>
+                        <div class="col-md-3 accion text-center">
+                            <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Clima.png': '/images/layout/Clima.png']" alt="">
+                        </div>
+                    </div>
+                </router-link>
+                <router-link to="camaras_au_prin" class="text-decoration-none">
+                    <div class="row">
+                        <div class="col-md-9 accion">
+                            Cámaras Auditorios
                         </div>
                         <div class="col-md-3 accion text-center">
                             <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Clima.png': '/images/layout/Clima.png']" alt="">

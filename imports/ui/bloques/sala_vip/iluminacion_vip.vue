@@ -42,7 +42,7 @@
                     <img v-bind:src="[encendido_reuniones_pared ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Sala de reuniones Pared
+                    Luces apliqué pared
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_reuniones_pared ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -53,7 +53,7 @@
                     <img v-bind:src="[encendido_vip_cuadrados ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Cuadrados
+                    Luces decorativas
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_vip_cuadrados ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -61,7 +61,7 @@
             </div>
             <div ref="ing_vip" class="row bloque_opcion" v-on:click='ing_vip' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_ing_vip ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                    <img v-bind:src="[encendido_ing_vip ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
                     Ingreso VIP
@@ -99,11 +99,11 @@ export default {
     methods:{
         super_vip() {
             let bloque_1 = new Array();
-            bloque_1 = ['2/1/0','2/1/2'];
+            bloque_1 = ['1/0/3','1/0/4'];
             const button = this.$refs.super_vip
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                 { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -126,7 +126,7 @@ export default {
             const button = this.$refs.s_reuniones
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -149,7 +149,7 @@ export default {
             const button = this.$refs.c_reuniones
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -172,7 +172,7 @@ export default {
             const button = this.$refs.reuniones_pared
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -195,7 +195,7 @@ export default {
             const button = this.$refs.vip_cuadrados
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -214,11 +214,11 @@ export default {
         },
         ing_vip() {
             let bloque_1 = new Array();
-            bloque_1 = ['2/0/0', '2/0/2'];
+            bloque_1 = ['1/0/0','1/0/1', '1/0/2'];
             const button = this.$refs.ing_vip
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -242,7 +242,7 @@ export default {
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
             
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {

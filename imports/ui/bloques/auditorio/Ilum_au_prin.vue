@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-6">
+    <div class="col-md-6 scroll">
         <div class="text-center subtitulo">
             <span class="text-center">Iluminación Auditorio Principal</span>
         </div>
@@ -9,7 +9,7 @@
                     <img v-bind:src="[encendido_au_pas_prin ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Pasillo Principal
+                    Lobby aud. principal
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_pas_prin ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -74,7 +74,7 @@
                     <img v-bind:src="[encendido_au_prin_escenario ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Escenario
+                    Solo Escenario
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_prin_escenario ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
@@ -108,15 +108,15 @@
             </div>
         </div>
         <div class="col-md-12">
-            <div ref="au_prin_esc_coro" class="row bloque_opcion" v-on:click='au_prin_esc_coro' data-estado="1">
+            <div ref="au_prin_esc_concierto" class="row bloque_opcion" v-on:click='au_prin_esc_concierto' data-estado="1">
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_au_prin_esc_coro ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                    <img v-bind:src="[encendido_au_prin_esc_concierto ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    Modo Coro
+                    Modo Concierto
                 </div>
                 <div class="col-md-2">
-                    <img v-bind:src="[encendido_au_prin_esc_coro ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                    <img v-bind:src="[encendido_au_prin_esc_concierto ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
         </div>
@@ -130,6 +130,19 @@
                 </div>
                 <div class="col-md-2">
                     <img v-bind:src="[encendido_au_prin_esc_tenue ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div ref="au_prin_esc_salida" class="row bloque_opcion" v-on:click='au_prin_esc_salida' data-estado="1">
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_prin_esc_salida ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
+                </div>
+                <div class="col-md-8 opcion">
+                    Modo Salida
+                </div>
+                <div class="col-md-2">
+                    <img v-bind:src="[encendido_au_prin_esc_salida ? '/images/layout/Iconos_peques/IluminacionB.png': '/images/layout/Iconos_peques/IluminacionA.png']" alt="">
                 </div>
             </div>
         </div>
@@ -217,8 +230,9 @@ export default {
         encendido_au_prin_esc_pasi_sud: Boolean,
         encendido_au_prin_esc_diserta: Boolean,
         encendido_au_prin_esc_limpieza: Boolean,
-        encendido_au_prin_esc_coro: Boolean,
+        encendido_au_prin_esc_concierto: Boolean,
         encendido_au_pas_prin: Boolean,
+        encendido_au_prin_esc_salida: Boolean,
     },
     methods:{
         au_prin_blq_norte() {
@@ -227,7 +241,7 @@ export default {
             const button = this.$refs.au_prin_blq_norte
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -250,7 +264,7 @@ export default {
             const button = this.$refs.au_prin_blq_sud
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -273,7 +287,7 @@ export default {
             const button = this.$refs.au_prin_blq_posterior
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -296,7 +310,7 @@ export default {
             const button = this.$refs.au_prin_blq_central
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -319,7 +333,7 @@ export default {
             const button = this.$refs.au_prin_escenario
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -342,7 +356,7 @@ export default {
             const button = this.$refs.au_prin_mezanine
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -365,7 +379,7 @@ export default {
             const button = this.$refs.au_prin_haz_luz
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -384,11 +398,12 @@ export default {
         },
         au_prin_pas_traduc() {
             let bloque_1 = new Array();
-            bloque_1 = ['0/1/0'];
+            // bloque_1 = ['0/1/0'];
+            bloque_1 = ['5/4/1'];
             const button = this.$refs.au_prin_pas_traduc
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -411,7 +426,7 @@ export default {
             const button = this.$refs.au_prin_ofi_traduc
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -431,11 +446,12 @@ export default {
 
         au_prin_esc_limpieza() {
             let bloque_1 = new Array();
-            bloque_1 = ['3/0/0' ,'3/0/5', '3/0/8', '3/0/13'];
+            // bloque_1 = ['3/0/0' ,'3/0/5', '3/0/8', '3/0/13'];
+            bloque_1 = ['3/0/0', '3/0/12', '3/1/1', '3/1/3'];
             const button = this.$refs.au_prin_esc_limpieza
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -455,11 +471,11 @@ export default {
         
         au_prin_esc_diserta() {
             let bloque_1 = new Array();
-            bloque_1 = ['3/0/15', '3/1/0'];
+            bloque_1 = ['3/0/0' ,'3/0/5', '3/0/8', '3/0/13', '3/1/6', '3/0/15', '3/1/0'];
             const button = this.$refs.au_prin_esc_diserta
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -476,22 +492,23 @@ export default {
                         }
                 });
         },
-        au_prin_esc_coro() {
+        au_prin_esc_concierto() {
             let bloque_1 = new Array();
-            bloque_1 = ['3/1/1'];
-            const button = this.$refs.au_prin_esc_coro
+            // bloque_1 = ['3/1/1'];
+            bloque_1 = ['3/1/1', '3/1/2'];
+            const button = this.$refs.au_prin_esc_concierto
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
                             if (valor == '0') {
-                                this.encendido_au_prin_esc_coro = false;
+                                this.encendido_au_prin_esc_concierto = false;
                                 button.dataset.estado = '1';
                             } else{
-                                this.encendido_au_prin_esc_coro = true;
+                                this.encendido_au_prin_esc_concierto = true;
                                 button.dataset.estado = '0';
                             }
                         } else{
@@ -501,12 +518,12 @@ export default {
         },
         au_prin_esc_tenue() {
             let bloque_1 = new Array();
-            bloque_1 = ['3/1/4', '3/1/5'];
+            bloque_1 = ['3/1/4', '3/1/5', '3/1/7'];
             // bloque_1 = ['5/3/19'];
             const button = this.$refs.au_prin_esc_tenue
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -523,13 +540,37 @@ export default {
                         }
                 });
         },
+        au_prin_esc_salida() {
+            let bloque_1 = new Array();
+            bloque_1 = ['3/1/3', '3/0/0' ,'3/0/5', '3/0/8', '3/0/13', '3/0/14'];
+            // bloque_1 = ['5/3/19'];
+            const button = this.$refs.au_prin_esc_salida
+            let valor = button.dataset.estado;
+            console.log("Estado: "+valor);
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                    { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
+                    (error, result) => {
+                        if (!error) {
+                            console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                            if (valor == '0') {
+                                this.encendido_au_prin_esc_salida = false;
+                                button.dataset.estado = '1';
+                            } else{
+                                this.encendido_au_prin_esc_salida = true;
+                                button.dataset.estado = '0';
+                            }
+                        } else{
+                            console.log(error);
+                        }
+                });
+        },
         au_prin_esc_pasi_norte() {
             let bloque_1 = new Array();
             bloque_1 = ['3/0/0'];
             const button = this.$refs.au_prin_esc_pasi_norte
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -552,7 +593,7 @@ export default {
             const button = this.$refs.au_prin_esc_pasi_sud
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
@@ -571,11 +612,11 @@ export default {
         },
         au_pas_prin() {
             let bloque_1 = new Array();
-            bloque_1 = ['5/3/2','5/3/12'];
+            bloque_1 = ['0/0/11'];
             const button = this.$refs.au_pas_prin
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
-                let result = HTTP.call('POST', 'http://app:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.6.254", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
