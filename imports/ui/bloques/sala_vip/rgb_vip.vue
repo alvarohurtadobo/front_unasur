@@ -158,13 +158,13 @@ export default {
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
-                            if (valor == '0') {
-                                this.encendido_rgb_azul = false;
-                                button.dataset.estado = '1';
-                            } else{
-                                this.encendido_rgb_azul = true;
-                                button.dataset.estado = '0';
-                            }
+                            // if (valor == '0') {
+                            //     this.encendido_rgb_azul = false;
+                            //     button.dataset.estado = '1';
+                            // } else{
+                            //     this.encendido_rgb_azul = true;
+                            //     button.dataset.estado = '0';
+                            // }
                         } else{
                             console.log(error);
                         }
@@ -182,13 +182,13 @@ export default {
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
-                            if (valor == '0') {
-                                this.encendido_rgb_verde = false;
-                                button.dataset.estado = '1';
-                            } else{
-                                this.encendido_rgb_verde = true;
-                                button.dataset.estado = '0';
-                            }
+                            // if (valor == '0') {
+                            //     this.encendido_rgb_verde = false;
+                            //     button.dataset.estado = '1';
+                            // } else{
+                            //     this.encendido_rgb_verde = true;
+                            //     button.dataset.estado = '0';
+                            // }
                         } else{
                             console.log(error);
                         }
@@ -206,13 +206,13 @@ export default {
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
-                            if (valor == '0') {
-                                this.encendido_rgb_rojo = false;
-                                button.dataset.estado = '1';
-                            } else{
-                                this.encendido_rgb_rojo = true;
-                                button.dataset.estado = '0';
-                            }
+                            // if (valor == '0') {
+                            //     this.encendido_rgb_rojo = false;
+                            //     button.dataset.estado = '1';
+                            // } else{
+                            //     this.encendido_rgb_rojo = true;
+                            //     button.dataset.estado = '0';
+                            // }
                         } else{
                             console.log(error);
                         }
@@ -230,13 +230,13 @@ export default {
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
-                            if (valor == '0') {
-                                this.encendido_rgb_plateado = false;
-                                button.dataset.estado = '1';
-                            } else{
-                                this.encendido_rgb_plateado = true;
-                                button.dataset.estado = '0';
-                            }
+                            // if (valor == '0') {
+                                // this.encendido_rgb_plateado = false;
+                                // button.dataset.estado = '1';
+                            // } else{
+                                // this.encendido_rgb_plateado = true;
+                                // button.dataset.estado = '0';
+                            // }
                         } else{
                             console.log(error);
                         }
@@ -254,13 +254,13 @@ export default {
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
-                            if (valor == '0') {
-                                this.encendido_rgb_efecto_1 = false;
-                                button.dataset.estado = '1';
-                            } else{
-                                this.encendido_rgb_efecto_1 = true;
-                                button.dataset.estado = '0';
-                            }
+                            // if (valor == '0') {
+                            //     this.encendido_rgb_efecto_1 = false;
+                            //     button.dataset.estado = '1';
+                            // } else{
+                            //     this.encendido_rgb_efecto_1 = true;
+                            //     button.dataset.estado = '0';
+                            // }
                         } else{
                             console.log(error);
                         }
@@ -278,13 +278,13 @@ export default {
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
-                            if (valor == '0') {
-                                this.encendido_rgb_efecto_2 = false;
-                                button.dataset.estado = '1';
-                            } else{
-                                this.encendido_rgb_efecto_2 = true;
-                                button.dataset.estado = '0';
-                            }
+                            // if (valor == '0') {
+                            //     this.encendido_rgb_efecto_2 = false;
+                            //     button.dataset.estado = '1';
+                            // } else{
+                            //     this.encendido_rgb_efecto_2 = true;
+                            //     button.dataset.estado = '0';
+                            // }
                         } else{
                             console.log(error);
                         }
@@ -302,13 +302,13 @@ export default {
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
-                            if (valor == '0') {
-                                this.encendido_rgb_efecto_3 = false;
-                                button.dataset.estado = '1';
-                            } else{
-                                this.encendido_rgb_efecto_3 = true;
-                                button.dataset.estado = '0';
-                            }
+                            // if (valor == '0') {
+                            //     this.encendido_rgb_efecto_3 = false;
+                            //     button.dataset.estado = '1';
+                            // } else{
+                            //     this.encendido_rgb_efecto_3 = true;
+                            //     button.dataset.estado = '0';
+                            // }
                         } else{
                             console.log(error);
                         }
@@ -326,13 +326,13 @@ export default {
                     (error, result) => {
                         if (!error) {
                             console.log("Los datos recibidos son: " + JSON.stringify(result.data));
-                            if (valor == '0') {
-                                this.encendido_rgb_efecto_4 = false;
-                                button.dataset.estado = '1';
-                            } else{
-                                this.encendido_rgb_efecto_4 = true;
-                                button.dataset.estado = '0';
-                            }
+                            // if (valor == '0') {
+                            //     this.encendido_rgb_efecto_4 = false;
+                            //     button.dataset.estado = '1';
+                            // } else{
+                            //     this.encendido_rgb_efecto_4 = true;
+                            //     button.dataset.estado = '0';
+                            // }
                         } else{
                             console.log(error);
                         }

@@ -1,5 +1,5 @@
 <template>
-  <div class="conteiner-fluid">
+  <div class="container-fluid" id="principal">
       <div class="row">
         <div class="col-md-2 menu">
             

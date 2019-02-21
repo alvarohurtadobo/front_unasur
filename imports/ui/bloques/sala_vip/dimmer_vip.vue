@@ -45,7 +45,7 @@
                     <img class="img_down" src="/images/layout/Iconos_peques/IluminacionA.png" alt="">
                 </div>
                 <div class="col-md-8 opcion">
-                    <label for="formControlRange">Sala Super VIP Diag. 1</label>
+                    <label v-on:click="super_vip" for="formControlRange">Sala Super VIP</label>
                     <input type="range" class="form-control-range" v-on:change="dimm_vip('dimmer_vip_4',$event.target.value)" v-model="dimmer_vip_4" id="formControlRange" name="dimm_vip_4" min="5" max="100">
                 </div>
                 <div class="col-md-2">
@@ -63,50 +63,7 @@
                     <img v-bind:src="[encendido_dimm_1_down ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
                 </div>
             </div>
-            <div class="row bloque_opcion">
-                <div ref="dimmer_vip_2" class="col-md-2" v-on:click='dimm_vip("dimmer_vip_2", "down")'  data-estado="0">
-                    <img class="img_down" v-bind:src="[encendido_dimm_2 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
-                </div>
-                <div class="col-md-8 opcion">
-                    Sala de reuniones diag. 1
-                </div>
-                <div ref="dimmer_vip_2" class="col-md-2" v-on:click='dimm_vip("dimmer_vip_2", "up")' data-estado="0">
-                    <img v-bind:src="[encendido_dimm_2 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
-                </div>
-            </div>
-            <div class="row bloque_opcion">
-                <div ref="dimmer_vip_3" class="col-md-2" v-on:click='dimm_vip("dimmer_vip_3", "down")'  data-estado="0">
-                    <img class="img_down" v-bind:src="[encendido_dimm_3 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
-                </div>
-                <div class="col-md-8 opcion">
-                    Sala de reuniones diag. 2
-                </div>
-                <div ref="dimmer_vip_3" class="col-md-2" v-on:click='dimm_vip("dimmer_vip_3", "up")' data-estado="0">
-                    <img v-bind:src="[encendido_dimm_3 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
-                </div>
-            </div>
-            <div class="row bloque_opcion">
-                <div ref="dimmer_vip_4" class="col-md-2" v-on:click='dimm_vip("dimmer_vip_4", "down")'  data-estado="0">
-                    <img class="img_down" v-bind:src="[encendido_dimm_4 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
-                </div>
-                <div class="col-md-8 opcion">
-                    Sala Super VIP Diag. 1
-                </div>
-                <div ref="dimmer_vip_4" class="col-md-2" v-on:click='dimm_vip("dimmer_vip_4", "up")' data-estado="0">
-                    <img v-bind:src="[encendido_dimm_4 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
-                </div>
-            </div> -->
-            <!-- <div class="row bloque_opcion">
-                <div ref="dimmer_vip_5" class="col-md-2" v-on:click='dimm_vip("dimmer_vip_5", "down")'  data-estado="0">
-                    <img class="img_down" v-bind:src="[encendido_dimm_5 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
-                </div>
-                <div class="col-md-8 opcion">
-                    Sala Super VIP Diag. 2
-                </div>
-                <div ref="dimmer_vip_5" class="col-md-2" v-on:click='dimm_vip("dimmer_vip_5", "up")' data-estado="0">
-                    <img v-bind:src="[encendido_dimm_5 ? '/images/layout/Iconos_peques/IluminacionA.png': '/images/layout/Iconos_peques/IluminacionB.png']" alt="">
-                </div>
-            </div> -->
+            -->
         </div>
     </div>
 </template>
@@ -114,7 +71,7 @@
 <script>
 export default {
     props:{
-       
+       encendido_super_vip: Boolean,
     },
     data(){
         return {
@@ -139,6 +96,29 @@ export default {
                         } else{
                             console.log(error);
                         }
+            });
+        },
+        super_vip() {
+            let bloque_1 = new Array();
+            bloque_1 = ['1/0/3','1/0/4'];
+            // const button = this.$refs.super_vip
+            let valor = 1; //button.dataset.estado;
+            console.log("Estado: "+valor);
+            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+                { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
+                (error, result) => {
+                    if (!error) {
+                        console.log("Los datos recibidos son: " + JSON.stringify(result.data));
+                        // if (valor == '0') {
+                        //     this.encendido_super_vip = false;
+                        //     button.dataset.estado = '1';
+                        // } else{
+                        //     this.encendido_super_vip = true;
+                        //     button.dataset.estado = '0';
+                        // }
+                    } else{
+                        console.log(error);
+                    }
             });
         },
         // dimm_vip(n,t) {

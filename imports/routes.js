@@ -11,6 +11,7 @@ import iluminacion_sm_hall from "/imports/ui/bloques/sala_multiple/ilum_sm_hall.
 import iluminacion_sm_parqueo from "/imports/ui/bloques/sala_multiple/ilum_sm_parqueo.vue";
 import energia_sm from '/imports/ui/bloques/sala_multiple/energia_sm.vue';
 import riego from '/imports/ui/bloques/sala_multiple/riego_sm.vue';
+import camaras_sm from '/imports/ui/bloques/sala_multiple/camaras_sm.vue';
 // ************* PLAZA DE COMIDAS ************
 import pc from '/imports/ui/bloques/plaza_comidas/Opt_pc.vue';
 import accesos_pc from "/imports/ui/bloques/plaza_comidas/Accesos_pc.vue";
@@ -22,6 +23,7 @@ import iluminacion_vip from '/imports/ui/bloques/sala_vip/iluminacion_vip.vue';
 import dimmer_vip from '/imports/ui/bloques/sala_vip/dimmer_vip.vue';
 import rgb_vip from '/imports/ui/bloques/sala_vip/rgb_vip.vue';
 import aire_vip from '/imports/ui/bloques/sala_vip/aire_vip.vue';
+import camaras_vip from '/imports/ui/bloques/sala_vip/camaras_vip.vue';
 // ************* AUDITORIO *******************
 import au from '/imports/ui/bloques/auditorio/Opt_au.vue';
 import accesos_au from "/imports/ui/bloques/auditorio/Accesos_au.vue";
@@ -67,7 +69,11 @@ RouterFactory.configure(router => {
           {
             path: "/riego",
             component: riego
-          }
+          },
+          {
+            path: "/camaras_sm",
+            component: camaras_sm
+          },
         ]
       },
       {
@@ -109,6 +115,10 @@ RouterFactory.configure(router => {
           {
             path: "/aire_vip",
             component: aire_vip
+          },
+          {
+            path: "/camaras_vip",
+            component: camaras_vip
           }
         ]
       },

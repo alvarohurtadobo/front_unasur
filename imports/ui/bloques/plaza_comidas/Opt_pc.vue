@@ -26,7 +26,7 @@
                             </div>
                         </div>
                     </router-link>
-                    <router-link to="incendios_pc" class="text-decoration-none">
+                    <router-link to="incendio_pc" class="text-decoration-none">
                         <div class="row">
                             <div class="col-md-9 accion">
                                 Alarma incendio

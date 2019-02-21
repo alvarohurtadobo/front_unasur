@@ -66,6 +66,16 @@
                             </div>
                         </div>
                     </router-link>
+                    <router-link to="camaras_sm" class="text-decoration-none">
+                    <div class="row">
+                        <div class="col-md-9 accion">
+                            Cámaras Sala Multiple
+                        </div>
+                        <div class="col-md-3 accion text-center">
+                            <img v-bind:src="[encendido_acceso_1 ? '/images/layout/Clima.png': '/images/layout/Clima.png']" alt="">
+                        </div>
+                    </div>
+                </router-link>
                 </div>           
             </div>
             <router-view></router-view>

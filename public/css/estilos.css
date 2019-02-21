@@ -11,7 +11,7 @@
     font-weight: normal;
     font-style: normal;
 }
-html, body{
+body{
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
   font-family: AeroMaticsLight;
   height:100%;
@@ -19,10 +19,16 @@ html, body{
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: url('../images/layout/Fondos/Fondos\ Azul-01.png') no-repeat center center fixed;
-    background-size: cover;
+  /* background: url('../images/layout/Fondos/Fondos\ Azul-01.png') no-repeat center center fixed; */
+  /* filter:brightness(0.6); */
+  background: url('../images/banderas.jpg') no-repeat center center fixed;
+  background-size: cover;
+  
 }
-
+#principal{
+    background-color: rgba(12, 15, 55, 0.8);
+    /* z-index:-1; */
+}
 .bloques{
     /* background-color:rgba(54, 70, 136, 0.9); */
     font-size: 2.4rem;
@@ -30,7 +36,7 @@ html, body{
 }
 .bloque_opcion{
     background-color: rgba(34, 41, 67, 0.6);
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     text-align: center;
     padding: 5px 0 5px 0;
     border-bottom: solid 1px #ACABB1;
@@ -94,7 +100,7 @@ html, body{
 
 /* Dimmer Slider */
 input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+ /* -webkit-appearance: none;  Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
 }

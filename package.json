@@ -10,6 +10,7 @@
   "dependencies": {
     "@babel/runtime": "^7.1.5",
     "meteor-node-stubs": "^0.4.1",
+    "rtspclient": "github:almightyju/rtspclient#master",
     "vue": "^2.5.22",
     "vue-router": "^3.0.0"
   },

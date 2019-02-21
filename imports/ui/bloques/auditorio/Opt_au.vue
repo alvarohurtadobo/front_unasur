@@ -1,6 +1,6 @@
 <template>
 <div class="h-100 col-md-12">
-    <div class="h-100 row">
+    <div class="h-100 row scroll">
         <div class="h-100 col-md-6 division">
             <div class="text-center titulo">
                 <span>Auditorio</span>

@@ -53,6 +53,16 @@
                             </div>
                         </div>
                     </router-link>
+                    <router-link to="camaras_vip" class="text-decoration-none">
+                        <div class="row">
+                            <div class="col-md-9 accion">
+                                Camaras VIP
+                            </div>
+                            <div class="col-md-3 accion text-center">
+                                <img v-bind:src="[encendido_acceso_1 ? '/images/layout/clima.png': '/images/layout/Clima.png']" alt="">
+                            </div>
+                        </div>
+                    </router-link>
                 </div>
             </div>
             <router-view></router-view>
@@ -62,6 +72,9 @@
 
 <script>
 export default {
+    props:{
+        encendido_acceso_1:Boolean,
+    }
 }
 </script>
 
