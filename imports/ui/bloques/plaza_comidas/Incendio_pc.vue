@@ -32,7 +32,7 @@ export default {
             let valor = button.dataset.estado;
             console.log("Estado: "+valor);
 
-                let result = HTTP.call('POST', 'http://localhost:3001/api/knx/devices',
+                let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
                     { data: { "ip": "192.168.2.86", "group": bloque_1, "order": parseInt(valor)} },
                     (error, result) => {
                         if (!error) {
