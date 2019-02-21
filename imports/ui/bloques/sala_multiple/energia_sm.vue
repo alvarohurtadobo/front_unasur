@@ -94,7 +94,7 @@ export default {
             let valor = button.dataset.estado,
             d_voltage = 0;
             console.log("Estado: "+valor);
-            HTTP.call('POST', 'http://192.168.8.6:3001/api/modbus/devices',
+            HTTP.call('POST', 'http://localhost:3001/api/modbus/devices',
                 { data: { "ip": "192.168.2.87", "parameter": "voltage", "type": "instant" } },
                 (error, result) => {
                     if (!error) {
@@ -115,7 +115,7 @@ export default {
             let valor = button.dataset.estado,
             d_voltage = 0;
             console.log("Estado: "+valor);
-            HTTP.call('POST', 'http://192.168.8.6:3001/api/modbus/devices',
+            HTTP.call('POST', 'http://localhost:3001/api/modbus/devices',
                 { data: { "ip": "192.168.2.87", "parameter": "current", "type": "instant" } },
                 (error, result) => {
                     if (!error) {
@@ -138,7 +138,7 @@ export default {
             let grupos = new Array();
             grupos = ['1/2/14'];
             console.log('Reset incendios');
-            HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+            HTTP.call('POST', 'http://localhost:3001/api/knx/devices',
                 { data: { "ip": "192.168.8.254", "group": grupos, "order": parseInt(valor) } },
                 (error, result) => {
                     if (!error) {

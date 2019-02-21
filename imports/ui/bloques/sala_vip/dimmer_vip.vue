@@ -84,7 +84,7 @@ export default {
     methods:{
         dimm_vip(n,t){
             console.log("Nombre del dimmer: "+n+ " Valor del dimmer: "+ t);
-            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/dimmer_abs/',
+            let result = HTTP.call('POST', 'http://localhost:3001/api/knx/devices/dimmer_abs/',
                     { data: { "ip": "192.168.4.214",
                               "dimmname": n,
                               "absolute": t
@@ -104,7 +104,7 @@ export default {
             // const button = this.$refs.super_vip
             let valor = 1; //button.dataset.estado;
             console.log("Estado: "+valor);
-            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices',
+            let result = HTTP.call('POST', 'http://localhost:3001/api/knx/devices',
                 { data: { "ip": "192.168.4.214", "group": bloque_1, "order": parseInt(valor)} },
                 (error, result) => {
                     if (!error) {
@@ -132,7 +132,7 @@ export default {
         //         valor = valor - 5;
         //     }
         //     console.log("Estado: "+valor+ ' -- '+t+' -- '+n);
-        //     let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/dimmer_abs/',
+        //     let result = HTTP.call('POST', 'http://localhost:3001/api/knx/devices/dimmer_abs/',
         //             { data: { "ip": "192.168.4.214",
         //                       "dimmname": n,
         //                       "absolute": valor

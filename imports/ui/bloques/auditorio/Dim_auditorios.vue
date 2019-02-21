@@ -118,7 +118,7 @@ export default {
     methods:{
         dimm_auditorios(n,t){
             console.log("Nombre del dimmer: "+n+ " Valor del dimmer: "+ t);
-            let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/dimmer_abs/',
+            let result = HTTP.call('POST', 'http://localhost:3001/api/knx/devices/dimmer_abs/',
                     { data: { "ip": "192.168.6.254",
                               "dimmname": n,
                               "absolute": t
@@ -143,7 +143,7 @@ export default {
         //         valor = valor - 5;
         //     }
         //     console.log("Estado: "+valor+ ' -- '+t+' -- '+n);
-        //     let result = HTTP.call('POST', 'http://192.168.8.6:3001/api/knx/devices/dimmer_abs/',
+        //     let result = HTTP.call('POST', 'http://localhost:3001/api/knx/devices/dimmer_abs/',
         //             { data: { "ip": "192.168.6.254",
         //                       "dimmname": n,
         //                       "absolute": valor
